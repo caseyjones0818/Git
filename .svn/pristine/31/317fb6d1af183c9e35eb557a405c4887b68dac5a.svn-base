@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+@Component({
+  selector: 'page-Needtobuy',
+  templateUrl: 'Needtobuy.html'
+})
+export class NeedtobuyPage{
+
+  constructor(public navCtrl: NavController) {
+  }
+
+}
+

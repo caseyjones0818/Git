@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>他的评论</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let i of data">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+i.avatar+'-thumbnail25'}}">
+      </ion-avatar>
+      <h2>{{i.userName}}</h2>
+    </ion-item>
+    <ion-card-content>
+      <p>{{i.commentContent}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col center text-right>
+        <ion-note>
+          {{i.commentTime | date:"yyyy-MM-dd"}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

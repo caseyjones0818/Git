@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>我</ion-title>
+    <ion-buttons end [navPush]="sitePage">
+      <button ion-button icon-only>
+        <p>设置</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="color1">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="{{avatar+'-thumbnail25'}}" style="width: 80px;height: 80px">
+      <!--<input type="file" />-->
+    </ion-avatar>
+    <ion-avatar item-right style="margin-top: -12%;">
+      <p>金币{{gold}}</p>
+      <p><ion-icon name="vip1" class="vip1"></ion-icon>LV{{vipLevel}}</p>
+    </ion-avatar>
+    <h2 (click)="editNickname()" >{{userName}}<ion-icon name="bi"></ion-icon></h2>
+    <p (click)="introductionToEditing()">简介：{{signature}}<ion-icon name="bi"></ion-icon></p>
+  </ion-item>
+  <ion-grid text-center padding margin-bottom class="color2">
+    <ion-row >
+      <ion-col width-33>0<br><span >热度</span></ion-col>
+      <ion-col width-33 [navPush]="followerPage">{{fansCount}}<br><span >粉丝</span></ion-col>
+      <ion-col width-33 (click)="push(token)">{{followCount}}<br><span >关注</span></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid text-center padding class="color2">
+    <ion-label color="dark" stacked text-left padding-bottom>我的应用</ion-label>
+    <ion-row padding-bottom>
+      <ion-col width-25 [navPush]="push1Page">
+      <ion-icon name="zhuanjibi" item-left class="IconSize color4"></ion-icon><br>
+          <span class="IconFont">赚金币</span>
+      </ion-col>
+      <ion-col width-25 [navPush]="push2Page">
+        <ion-icon name="xiaoxi" item-left class="IconSize color5"></ion-icon><br>
+         <span class="IconFont">我的消息</span>
+      </ion-col>
+      <ion-col width-25 [navPush]="push3Page">
+        <ion-icon name="md-images" item-left class="IconSize color5"></ion-icon><br>
+         <span class="IconFont">发布记录</span>
+      </ion-col>
+      <ion-col width-25 [navPush]="push4Page">
+        <ion-icon name="pinglun" item-left class="IconSize color3"></ion-icon><br>
+         <span class="IconFont">我的评论</span>
+      </ion-col>
+    </ion-row>
+    <ion-row padding-bottom>
+      <ion-col width-25 [navPush]="push5Page">
+        <ion-icon name="shoucang" item-left class="IconSize color3"></ion-icon><br>
+         <span class="IconFont">收藏夹</span>
+      </ion-col>
+      <ion-col width-25 [navPush]="push8Page">
+        <ion-icon name="shangcheng" item-left class="IconSize color3"></ion-icon><br>
+         <span class="IconFont">金币商城</span>
+      </ion-col>
+      <ion-col width-25 [navPush]="push9Page">
+        <ion-icon name="yaoqin" item-left class="IconSize color4"></ion-icon><br>
+         <span class="IconFont">邀请好友</span>
+      </ion-col>
+      <ion-col width-25 [navPush]="push10Page">
+        <ion-icon name="chongzhi" item-left class="IconSize color4"></ion-icon><br>
+         <span class="IconFont">金币充值</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

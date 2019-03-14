@@ -1,0 +1,32 @@
+page-recharge {
+  $background-color: #f6f6fa;
+  $white: white;
+  $red: #f15a4a;
+  $blue: #1d8fe1;
+  $yellow: #f39826;
+  $MyPageFontsize:4vh;
+  $IocnFont:2.2vh;
+  .color1 {
+    background-color: $background-color;
+  }
+  .color2 {
+    background-color: $white;
+  }
+  .color3 {
+    color: $red;
+  }
+  .color4 {
+    color: $blue;
+  }
+  .color5 {
+    color: $yellow;
+  }
+  .IconSize{
+    font-size:$MyPageFontsize ;
+    padding-bottom: 1vh;
+  }
+  .IconFont{
+    font-size: $IocnFont;
+  }
+
+}

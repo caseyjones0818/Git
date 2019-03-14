@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>VIP服务详解</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p style="text-indent: 2em">自2016年8月8日正式上线以来，《收藏+》APP凭借其精准的鉴定服务以及优秀的用户体验，深受用户好评，
+    并得以飞速发展，同时也积累了大量的高净值用户以及数以亿计的高档艺术收藏品。</p>
+  <p style="text-indent: 2em">值此新春来临之际，《收藏+》迎来一次质的飞跃，将于近期针对VIP用户推出更多更实用的服务。根据用户的VIP等级开放相应层级的服务。</p>
+  <p style="text-indent: 2em">VIP等级由经验值决定，经验值等于当前粉丝数X100加获取金币的数量。每日任务或充值都可以获取金币。</p>
+  <p>各服务简介:</p>
+  <img src="assets/img/vip0.png" class="vip1">
+  <p>为VIP客户提供艺术收藏品的租赁服务，企业根据预算和需求提交申请，选择艺术品种类及摆放位置，平台负责布局策划以及安装等服务。</p><br>
+  <img src="assets/img/vip1.png" class="vip1"><br>
+  <p>经过平台鉴定过的个人藏品可以申请向平台提交托管，审核通过以后平台提供代销、送拍、租赁等变现途径，多种方式客户任意选择。</p><br>
+  <img src="assets/img/vip2.png" class="vip1"><br>
+  <p>【收藏+】联合众多藏品修复机构，为用户提供相应的信息咨询或者也可以将要修复的藏品邮寄到公司，公司帮您出修复方案供您选择。</p><br>
+  <img src="assets/img/vip3.png" class="vip1"><br>
+  <p>【收藏+】联合众多专业摄影机构，为客户提供摄影修图业务方面的咨询信息。也可以客户自己提供图片要求到【收藏+】平台，公司有针对收藏类艺术品的专业美工满足您的摄影要求。</p><br>
+  <img src="assets/img/vip4.png" class="vip1"><br>
+  <p>申请专业的个人顾问，一站式服务。</p><br>
+  <img src="assets/img/vip5.png" class="vip1"><br>
+  <p>用户发布求购需求，有相关藏品需要出售的可以响应，藏友免费发布求购信息，平台审核，保证信息的真实有效。</p><br>
+  <img src="assets/img/vip6.png" class="vip1"><br>
+  <p>由专业的推广机构对高端用户提供相应的包装、推广、炒作服务。市场推广，个人生平师承奖项履历，建立词条，编写文案利用各大门户网站进行个人的宣传。</p><br>
+  <img src="assets/img/vip7.png" class="vip1"><br>
+  <p>由专业机构协助用户举办个展或雅集，提供组织、传播、邀请专家等服务，承接展览业务的各地画廊，
+    艺术馆，博物馆, 拍卖行等机构，邀请业内专家名人，文案写作，组织新闻发布会，上传各大门户网站链接等。</p><br>
+  <img src="assets/img/vip8.png" class="vip1"><br>
+  <p>金融服务分为三块，抵押贷款、私募基金，众筹投资。</p><br>
+</ion-content>

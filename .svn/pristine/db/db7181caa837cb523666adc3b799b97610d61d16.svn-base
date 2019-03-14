@@ -1,0 +1,63 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.synconset.imagepicker": {
+            "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-badge": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-filepath": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-flashlight": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-http": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "jpush-phonegap-plugin": {
+            "APP_KEY": "eb63ecb59ca87db74e2569db",
+            "PACKAGE_NAME": "me.cllc.sc1"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "me.cllc.sc1"
+        }
+    }
+}

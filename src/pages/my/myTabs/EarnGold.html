@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>赚金币</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+    <ion-item *ngFor="let i of taskList,let e = index" class="renwuPadding">
+      <img src="assets/img/fenxiang.png" class="renwuImg" *ngIf="e===0"/>
+      <img src="assets/img/jl.png" class="renwuImg"*ngIf="e===1"/>
+      <img src="assets/img/pinglun.png" class="renwuImg"*ngIf="e===2"/>
+      <img src="assets/img/yaoqing.png" class="renwuImg"*ngIf="e===3"/>
+
+
+
+      <img src="assets/img/wwc.png" class="wcImg" (click)="EGpush(e)"  *ngIf="i.complete===false" />
+      <img src="assets/img/ywc.png" class="wcImg"  *ngIf="i.complete===true"/>
+      <h3>任务{{e+1}}： {{i.title}}</h3>
+      <p>{{i.comment}}</p>
+    </ion-item>
+</ion-content>

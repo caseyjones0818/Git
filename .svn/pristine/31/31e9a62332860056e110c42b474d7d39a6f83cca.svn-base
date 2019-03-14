@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>赚金币</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      每日任务
+    </ion-list-header>
+
+    <ion-item *ngFor="let i of taskList">
+      <h3>任务1</h3>
+      <h3>{{i.title}}</h3>
+      <p>{{i.comment}}</p>
+      <ion-badge item-right color="secondary" >未完成</ion-badge>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

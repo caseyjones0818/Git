@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>{{title}} ,{{categoryName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-item >
+      <ion-avatar item-left (click)="pushUserinfoPage(userId)">
+        <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+avatar+'-thumbnail25'}}">
+      </ion-avatar>
+      <h2>{{userName}}</h2>
+      <p>{{title}} ,{{categoryName}}</p>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4  col-sm  *ngFor="let img of imgList,let i = index">
+          <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="push(urlDetails, i)"  ></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card-content>
+      <p>{{introduction}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-left >
+            <img src="assets/img/yijiandin.png" class="jiandinTag" >
+      </ion-col>
+      <ion-col text-right >
+        <ion-note>
+          {{insertDate | date:"yyyy-MM-dd"}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        鉴定师：{{famousName}}
+      </ion-card-title>
+      <p>{{identifyResult}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right >
+        <ion-note>
+          {{updateDate | date:"yyyy-MM-dd"}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-row no-padding>
+      <!--<ion-col>
+       <button ion-button clear small color="danger"  icon-left >
+          <ion-icon name='star'></ion-icon>
+          收藏
+        </button>
+        <button ion-button clear small color="danger" *ngIf="favorite===true" icon-left (click)="bushoucang()">
+          <ion-icon name='star'></ion-icon>
+          已收藏
+        </button>
+      </ion-col>-->
+      <ion-col text-center >
+        <button ion-button clear small color="danger" icon-left (click)="doRadio()">
+          <ion-icon name='ios-create'></ion-icon>
+          打赏
+        </button>
+      </ion-col>
+     <ion-col text-center>
+        <button ion-button clear small color="danger" icon-left (click)="goShare()">
+          <ion-icon name='share-alt'></ion-icon>
+          分享
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

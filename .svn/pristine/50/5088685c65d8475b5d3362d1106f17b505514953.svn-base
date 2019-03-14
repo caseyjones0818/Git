@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>金币商城</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  ff
+</ion-content>

@@ -1,0 +1,6 @@
+page-site{
+  $background-huise:#f6f6fa;
+  .huise{
+    background-color: $background-huise;
+  }
+}

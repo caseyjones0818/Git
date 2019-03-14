@@ -1,0 +1,55 @@
+import { Component } from '@angular/core';
+import { NavController,NavParams} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http ,Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+import { HomeImprovementPage } from '../VIP/HomeImprovement/HomeImprovement';
+import { ConsignmentHostingPage } from '../VIP/ConsignmentHosting/ConsignmentHosting';
+import { RepairConsultationPage } from '../VIP/RepairConsultation/RepairConsultation';
+import { PhotographyPage } from '../VIP/Photography/Photography';
+import { ConsultantPage } from '../VIP/Consultant/Consultant';
+import { BuyingInformationPage } from '../VIP/BuyingInformation/BuyingInformation';
+import { VIPserviceDetailsPage } from '../VIP/VIPserviceDetails/VIPserviceDetails';
+
+@Component({
+  selector: 'page-VIP',
+  templateUrl: 'VIP.html'
+})
+export class VIPPage {
+  HomeImprovementPage:any = HomeImprovementPage;
+  ConsignmentHostingPage:any = ConsignmentHostingPage;
+  RepairConsultationPage:any = RepairConsultationPage;
+  PhotographyPage:any = PhotographyPage;
+  ConsultantPage:any = ConsultantPage;
+  BuyingInformationPage:any = BuyingInformationPage;
+  VIPserviceDetailsPage:any = VIPserviceDetailsPage;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,) {
+    storage.ready().then(() => {
+      storage.get('token').then((val) => {
+        console.log('token', val);
+        var token='token='+val;
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let data = {};
+        var url = 'http://120.132.92.55/sc_api/sc/api/vip/vipIndex?';
+        this.http.post(url+token, JSON.stringify(data))
+          .map(res => res.json())
+          .subscribe(data => {
+            console.log('进入VIP',data);
+
+          }, (err) => {
+            console.log(err);
+          });
+      })
+    });
+    storage.get('login_data').then((val) => {
+      console.log('login_data222',val)
+    })
+  }
+
+}
+

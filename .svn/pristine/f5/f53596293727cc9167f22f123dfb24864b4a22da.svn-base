@@ -1,0 +1,7 @@
+page-blacklist{
+  $blacklist-font:relative;
+  .blacklist-font{
+    position: $blacklist-font;
+    right: 5px;
+  }
+}

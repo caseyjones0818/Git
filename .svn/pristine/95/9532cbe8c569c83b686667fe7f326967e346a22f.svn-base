@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>邀请好友</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h3 text-center>用心服务 收藏到家</h3>
+  <p>不花钱也能玩收藏，即刻注册 收藏+APP 体验全新的收藏服务。 </p>
+  <ion-item>
+    <ion-label color="primary">邀请码</ion-label>
+    <ion-input placeholder=""></ion-input>
+  </ion-item>
+  <button ion-button full>分享</button>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>寄售托管</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="fa()">
+        <p>提交</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let i of data">
+      <ion-label>{{i.title}} <p>{{i.categoryName}}</p></ion-label>
+      <ion-checkbox (ionChange)="logEvent($event,i.id)" [disabled]="i.trusteeship==1||i.trusteeship==3||i.trusteeship==-1"></ion-checkbox>
+      <ion-thumbnail item-left>
+        <div background-size class="Myshoucang" [ngStyle]="{'background-image': 'url(' + i.iconImg+'-thumbnail25' + ')'}"></div>
+      </ion-thumbnail>
+      <p item-right *ngIf="i.trusteeship==0">未托管</p>
+      <p item-right *ngIf="i.trusteeship==1" color="cangzhen">已托管</p>
+      <p item-right *ngIf="i.trusteeship==3">审核中</p>
+      <p item-right *ngIf="i.trusteeship==-1">未通过</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

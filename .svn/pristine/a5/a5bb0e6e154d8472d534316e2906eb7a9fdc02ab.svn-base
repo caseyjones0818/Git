@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>收藏+</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-slides class="slide-height">
+    <ion-slide *ngFor="let banner of banners" >
+      <img  [src]="'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+banner.bannerImg" />
+    </ion-slide>
+    <!--<ion-slide >-->
+      <!--<img  src="assets/img/jianBao.png"/>-->
+    <!--</ion-slide>-->
+  </ion-slides>
+  <ion-grid text-center>
+    <ion-row class="xiaozi">
+      <ion-col width-25 [navPush]="ContactPage"><img text-wrap src="assets/img/jianBao.png" class="iconImg"><br>
+       一键鉴宝
+        </ion-col>
+      <ion-col width-25 [navPush]="QuanPage" ><img src="assets/img/cnagBaoGe.png" class="iconImg"><br>
+        藏宝阁
+      </ion-col>
+      <ion-col width-25 ><img src="assets/img/jiaoLiu.png" class="iconImg" ><br>
+       最新活动
+        </ion-col>
+      <ion-col width-25 [navPush]="RechargePage" ><img src="assets/img/jinBi.png" class="iconImg"><br>
+        充值金币
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list no-margin>
+    <ion-item>
+        <button ion-button color="cangzhen" item-left (click)="qiandao()" *ngIf="sign!=true">签到</button>
+        <button ion-button color="zise" item-left (click)="showToast('top')" *ngIf="sign!=false">已签</button>
+      <div class="xiaozi" *ngIf="sign!=true">领取{{point}}金币</div>
+      <div class="xiaozi" *ngIf="sign!=false">明日签到领取{{point}}金币</div>
+      <div item-right class="xiaozi huise" [navPush]="EarnGoldPage">赚金币  <ion-icon name="arrow-forward"></ion-icon></div>
+    </ion-item>
+  </ion-list>
+  <div class="zuixin">最新鉴定</div>
+  <ion-grid *ngFor="let appraisalNewList of appraisalNewLists">
+    <ion-row>
+        <ion-col col-4  col-sm *ngFor="let img of appraisalNewList.imgList;" >
+          <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="pushJiandinDetailed(appraisalNewList)"></div>
+           </ion-col>
+      </ion-row>
+    <div class="home-title">{{ appraisalNewList.title }}</div>
+    </ion-grid>
+
+
+</ion-content>

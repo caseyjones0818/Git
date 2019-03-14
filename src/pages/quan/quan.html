@@ -1,0 +1,166 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-searchbar (ionInput)="getItems($event)" (ionClear)="onClear($event)" (ionCancel)="onCancel($event)" [(ngModel)]="search"
+      placeholder="在这个搜索要找的藏品鉴定"></ion-searchbar>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment color="cangzhen" [(ngModel)]="shouCangQuan">
+      <ion-segment-button value="jiandin">
+        藏品鉴定
+      </ion-segment-button>
+      <ion-segment-button value="jinri">
+        今日热门
+      </ion-segment-button>
+      <ion-segment-button value="jiaoliu">
+        藏品交流
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngSwitch]="shouCangQuan">
+  <ion-refresher (ionRefresh)="doRefreshJiandin($event)" *ngSwitchCase="'jiandin'">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-refresher (ionRefresh)="doRefreshJinri($event)" *ngSwitchCase="'jinri'">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-refresher (ionRefresh)="doRefreshJiaoliu($event)" *ngSwitchCase="'jiaoliu'">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div>
+    <!--藏品鉴定-->
+    <ion-list no-padding *ngSwitchCase="'jiandin'">
+      <ion-card *ngFor="let jiandinData of jiandinInterface;">
+        <ion-item *ngIf="jiandinData.appraisalFlag==2">
+          <ion-avatar item-left>
+            <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+jiandinData.avatar+'-thumbnail25'}}" (click)="pushJiandinDetailed(jiandinData)">
+          </ion-avatar>
+          <h2 (click)="pushJiandinDetailed(jiandinData)">{{jiandinData.userName}}</h2>
+          <p (click)="pushJiandinDetailed(jiandinData)">{{jiandinData.title}} ,{{jiandinData.categoryName}}</p>
+        </ion-item>
+        <ion-item *ngIf="jiandinData.appraisalFlag==0">
+          <ion-avatar item-left>
+            <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+jiandinData.avatar+'-thumbnail25'}}" (click)="pushNoJiandinDetailed(jiandinData)">
+          </ion-avatar>
+          <h2>{{jiandinData.userName}}</h2>
+          <p>{{jiandinData.title}} ,{{jiandinData.categoryName}}</p>
+        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4 col-sm *ngFor="let img of jiandinData.imgList">
+              <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" *ngIf="jiandinData.appraisalFlag==2"
+                (click)="pushJiandinDetailed(jiandinData)"></div>
+              <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" *ngIf="jiandinData.appraisalFlag==0"
+                (click)="pushNoJiandinDetailed(jiandinData)"></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-card-content [navPush]="jiandinPage">
+          <p>{{jiandinData.introduction}}</p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <img src="assets/img/yijiandin.png" *ngIf="jiandinData.appraisalFlag==2" class="jiandinTag" (click)="pushJiandinDetailed(jiandinData)">
+            <img src="assets/img/weijiandin.png" *ngIf="jiandinData.appraisalFlag==0" class="jiandinTag" (click)="pushNoJiandinDetailed(jiandinData)">
+          </ion-col>
+          <ion-col text-right>
+            <ion-note>
+              {{jiandinData.insertDate| date:"yyyy-MM-dd"}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfiniteJiandin($event)" *ngSwitchCase="'jiandin'">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <!--今日热门-->
+    <ion-list no-padding *ngSwitchCase="'jinri'">
+      <ion-card *ngFor="let jinriData of jinriInterface">
+        <ion-item>
+          <ion-avatar item-left [navPush]="userinfoPage">
+            <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+jinriData.avatar+'-thumbnail25'}}" (click)="pushJinriDetailed(jinriData)">
+          </ion-avatar>
+          <h2 (click)="pushJinriDetailed(jinriData)">{{jinriData.userName}}</h2>
+          <p (click)="pushJinriDetailed(jinriData)">{{jinriData.title}} ,{{jinriData.categoryName}}</p>
+        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4 col-sm *ngFor="let img of jinriData.imgList;">
+              <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="pushJinriDetailed(jinriData)"></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-card-content>
+          <p (click)="pushJinriDetailed(jinriData)">{{jinriData.introduction}}</p>
+        </ion-card-content>
+        <ion-row>
+          <!--<ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div> 赞</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small (click)="pushJinriDetailed(jinriData)">
+              <ion-icon name="text"></ion-icon>
+              <div>{{jinriData.commentCount}} 评论</div>
+            </button>
+          </ion-col>-->
+          <ion-col center text-right>
+            <ion-note>
+              {{jinriData.insertDate| date:"yyyy-MM-dd"}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+    <!--藏品交流-->
+    <ion-list no-padding *ngSwitchCase="'jiaoliu'">
+      <ion-card *ngFor="let jiaoliuData of jiaoliuInterface">
+        <ion-item>
+          <ion-avatar item-left>
+            <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+jiaoliuData.avatar+'-thumbnail25'}}" (click)="pushJiaoliuDetailed(jiaoliuData)">
+          </ion-avatar>
+          <h2 (click)="pushJiaoliuDetailed(jiaoliuData)">{{jiaoliuData.userName}}</h2>
+          <p (click)="pushJiaoliuDetailed(jiaoliuData)">{{jiaoliuData.title}} ,{{jiaoliuData.categoryName}}</p>
+        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4 col-sm *ngFor="let img of jiaoliuData.imgList;">
+              <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="pushJiaoliuDetailed(jiaoliuData)"></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-card-content>
+          <p (click)="pushJiaoliuDetailed(jiaoliuData)">{{jiaoliuData.introduction}}</p>
+        </ion-card-content>
+        <ion-row>
+          <!--<ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div> 赞</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small (click)="pushJiaoliuDetailed(jiaoliuData)">
+              <ion-icon name="text"></ion-icon>
+              <div>{{jiaoliuData.commentCount}} 评论</div>
+            </button>
+          </ion-col>-->
+          <ion-col center text-right>
+            <ion-note>
+              {{jiaoliuData.insertDate| date:"yyyy-MM-dd"}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfiniteJiaoliu($event)" *ngSwitchCase="'jiaoliu'">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+  <ion-fab right bottom>
+    <button ion-fab color="top" (click)="scrollTo()" class="black"><ion-icon name="arrow-dropup"></ion-icon></button>
+  </ion-fab>
+</ion-content>

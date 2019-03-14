@@ -1,0 +1,32 @@
+<ion-content text-center>
+  <img class="logo-size" src="assets/img/cangzhen.jpeg" margin/>
+
+  <ion-item>
+    <ion-input type="number" placeholder="手机号" clearInput [(ngModel)]="phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="昵称" clearInput   [(ngModel)]="user_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="密码" clearInput  [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="验证码" clearInput [(ngModel)]="inviteCode"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="邀请码" clearInput ></ion-input>
+  </ion-item>
+  <button ion-button full margin-top color="login-button" class="cuti" (click)="fa()">获取验证码
+    <!--<countdown [config]='{{leftTime}}' >-->
+    <!--<div class="time" >$!s!</div>-->
+  <!--</countdown>-->
+  </button>
+  <button ion-button full margin-top color="login-button" class="cuti"  (click)="go()">注册</button>
+
+  <p text-center class="login-p-margin">有账户了？
+    <a [navPush]="LoginInterfacePage" >请登入</a>
+  </p>
+  <p class="footName">© 2017 上海藏珍信息科技</p>
+
+
+</ion-content>

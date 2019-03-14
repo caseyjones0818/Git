@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start (click)="modaleBack()">
+      <button ion-button icon-only color="royal">取消</button>
+    </ion-buttons>
+    <ion-title>发评论</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="cangzhen" (click)="fa()">发表</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-textarea padding autofocus="autofocus"  placeholder="请输入..."  [(ngModel)]="comment"></ion-textarea>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,104 @@
+import { Component } from '@angular/core';
+import { NavController,ModalController,NavParams} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+import { QuanImgPage } from  '../QuanImg'
+import { commentPage } from  '../QuanTabs/comment/comment'
+import { userinfoPage } from  '../../userinfo/userinfo';
+
+@Component({
+  selector: 'page-quan',
+  templateUrl: 'jiaoliu.html'
+})
+export class jiaoliuPage {
+  id:any;
+  collectionDetailData:any;
+  userName:any;
+  avatar:any;
+  imgList:any;
+  title:any;
+  introduction:any;
+  insertDate:any;
+  categoryName:any;
+  commentCount:any;
+  userId:any;
+  data
+  constructor(public navCtrl: NavController,
+              public modalCtrl: ModalController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,) {
+
+    var url = 'http://120.132.92.55/sc_api/sc/api/shou/collectionDetail?';
+    // storage.set('name', 'Max');
+    var token;
+    storage.get('token').then((val) => {
+      console.log("val:"+val)
+      token=val;
+    })
+
+//鉴定列表ID 传值
+    this.id = navParams.get('id');
+    console.log(this.id.id);
+    var id = this.id.id;
+    var userId = this.id.userId
+    this.userId = userId
+    var params="collection_id="+id;
+    if (token!=null){
+      params+="&token="+token;
+
+    }
+
+//详情页数据请求
+    this.http.get(url+params).map(res => res.json()).subscribe(data => {
+      this.collectionDetailData = data.data.collection;
+      let Data = this.collectionDetailData;
+      this.userName = Data.userName;
+      this.avatar = Data.avatar;
+      this.imgList = Data.imgList;
+      this.title = Data.title;
+      this.introduction = Data.introduction;
+      this.insertDate = Data.insertDate;
+      this.categoryName = Data.categoryName;
+      this.commentCount = Data.commentCount;
+
+      console.log(url+params)
+      console.log('藏品交流数据',this.collectionDetailData)
+
+    })
+
+  }
+  //图片查看器
+  push= (img:any, index:number): any =>{
+    this.navCtrl.push(QuanImgPage, {
+      'img':img,
+      'index': index,
+
+    });
+    console.log(img)
+  }
+  //跳转用户信息页
+  pushUserinfoPage=(userId:any):any =>{
+    this.navCtrl.push(userinfoPage, {
+      'userId':userId
+    });
+  }
+  presentModal() {
+    let modal = this.modalCtrl.create(QuanImgPage);
+    modal.present();
+  }
+  commentModal() {
+    let modal = this.modalCtrl.create(commentPage);
+    modal.present();
+  }
+
+  goBack() {
+    this.navCtrl.pop();
+  }
+}
+
+
+
+

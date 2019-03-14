@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>消息设置</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="huise">
+  <ion-item>
+    <ion-label>全部接受</ion-label>
+    <ion-toggle value="foo" checked="true"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>只接收我关注的用户</ion-label>
+    <ion-toggle value="foo" checked="true"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>拒绝所有私信</ion-label>
+    <ion-toggle value="foo" checked="true"></ion-toggle>
+  </ion-item>
+</ion-content>

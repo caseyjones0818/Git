@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>鉴定管理</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="huise">
+ <ion-card *ngFor="let i of data;">
+        <ion-item >
+          <ion-avatar item-left>
+            <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+i.avatar+'-thumbnail25'}}" >
+          </ion-avatar>
+          <h2 >{{i.userName}}</h2>
+          <p >{{i.title}} ,{{i.categoryName}}</p>
+        </ion-item>
+       
+       <ion-grid>
+          <ion-row>
+            <ion-col col-4 col-sm *ngFor="let img of i.imgList">
+              <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url +'-thumbnail25' + ')'}" (click)="push(i)"></div>
+              
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+         
+        <ion-card-content [navPush]="jiandinPage">
+          <p>{{i.introduction}}</p>
+        </ion-card-content>
+        <ion-row>
+          
+          <ion-col text-right>
+            <ion-note>
+              {{i.insertDate| date:"yyyy-MM-dd"}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+</ion-content>

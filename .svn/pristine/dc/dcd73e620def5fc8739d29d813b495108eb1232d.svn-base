@@ -1,0 +1,79 @@
+import { Component } from '@angular/core';
+import { NavController,NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http ,Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Component({
+  selector: 'page-userFollow',
+  templateUrl: 'userFollow.html'
+})
+
+export class userFollowPage {
+  data:any;
+  token:any;
+  followId:any;
+  e:any
+  URL
+  userId
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: Http,
+              private storage: Storage,) {
+
+    storage.ready().then(() => {
+      storage.get('token').then((val) => {
+        console.log('token', val);
+        var token='token='+val;
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let data = {};
+        var url = 'http://120.132.92.55/sc_api/sc/api/user/getUserFollowList?';
+        var userId = 'userId='+this.userId
+        this.URL =url+userId       //这个为了传到下面的doRefresh（）里
+        this.http.post(url+userId, JSON.stringify(data))
+          .map(res => res.json())
+          .subscribe(data => {
+            console.log(data)
+            this.data = data.data;
+            let e =   this.data;
+            for(let i = 0; i < e.length; i++){
+              this.followId = e[i].userId
+            }
+
+
+          }, (err) => {
+            console.log(err);
+          });
+      })
+    });
+    // this.storageda = storage.get('token')
+    this.userId = navParams.get('userId')
+
+  }
+  //返回上一页
+  goBack() {
+    this.navCtrl.pop();
+  }
+  //下拉刷新
+  doRefresh(refresher) {
+    console.log('222',this.URL)
+    setTimeout(() => {
+      let data = {};
+      this.http.post(this.URL, JSON.stringify(data))
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log(data)
+          this.data = data.data;
+          let e =   this.data;
+          for(let i = 0; i < e.length; i++){
+            this.followId = e[i].userId
+            // console.log('userId',this.followId)
+          }
+        }, (err) => {
+          console.log(err);
+        });   refresher.complete();
+    }, 2000);
+  }
+
+}

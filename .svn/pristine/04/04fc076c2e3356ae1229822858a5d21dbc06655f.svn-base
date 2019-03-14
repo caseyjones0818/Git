@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>家装租赁</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label color="primary">标的位置：</ion-label>
+    <ion-input placeholder="物品摆放的位置" [(ngModel)]="put_position"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">标的价值：</ion-label>
+    <ion-input placeholder="" class="start_money" [(ngModel)]="start_money"></ion-input>
+    <div item-content>~</div>
+    <ion-input placeholder="" class="end_money" [(ngModel)]="end_money"></ion-input>
+    <p item-right>万</p>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">标的类别：</ion-label>
+    <ion-select  [(ngModel)]="festId" (ionChange)="festSelected($event, festId)">
+      <ion-option *ngFor="let i of collectionCategoryBeanList" value="{{i.id}}">{{i.categoryName}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <p margin>是否需求其它服务：</p>
+  <ion-item *ngFor="let i of homeDecorateServiceBeanList">
+    <ion-label>{{i.serviceName}}</ion-label>
+    <ion-checkbox color="dark" (ionChange)="logEvent($event,i.id)"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">企业名称：</ion-label>
+    <ion-input placeholder="请填写企业名称" [(ngModel)]="company_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">联系人：</ion-label>
+    <ion-input placeholder="请填写联系人姓名" [(ngModel)]="contact"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">电话：</ion-label>
+    <ion-input placeholder="请填写联系方式" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+  <div text-center margin><a [navPush]="PrecautionsPage">*注意事项</a></div>
+  <button ion-button full (click)="fa()">提交</button>
+</ion-content>

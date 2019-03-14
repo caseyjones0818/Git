@@ -1,0 +1,124 @@
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
+import {Storage} from '@ionic/storage';
+import {Http, Headers} from '@angular/http';
+import {AlertController} from 'ionic-angular';
+import 'rxjs/add/operator/map';
+import {TabsPage} from '../tabs/tabs';
+import {changePasswordPage} from '../my/changePassword/changePassword';
+import {RegisterAccountPage} from '../RegisterAccount/RegisterAccount';
+import {md5} from '../../service/md5';
+import {Constant} from '../../service/Constant'
+
+
+@Component({
+  templateUrl: 'forgetPassword.html'
+})
+export class forgetPasswordPage {
+  phone
+  data
+  verifyCode
+  success
+  errMsg
+  YZM
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,
+              public alertCtrl: AlertController) {
+
+  }
+
+fa(){
+  let e = this.phone;
+if(e != null && e != ''){
+  var url =Constant.APP_URL + 'sc/api/verify/getResetVerifyCode?';
+  var phone = 'phone='+this.phone;
+  let headers = new Headers();
+  headers.append('Content-Type', 'application/json');
+  let data = {};
+  this.http.post(url+phone, JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+      console.log('发验证码',data);
+      this.data = data.data;
+      this.errMsg = data.errMsg
+      if(this.errMsg =="手机号码格式不对"){
+        this.alert('手机号码格式不对')
+      }
+    }, (err) => {
+      console.log(err);
+    });
+}
+else {
+  this.alert('手机号不得为空')
+}
+
+}
+go(){
+  let e = this.phone&&this.verifyCode ;
+  if(e != null && e != ''){
+    var url =Constant.APP_URL + 'sc/api/verify/validateVerifyCode?';
+    var phone = 'phone='+this.phone;
+    var verifyCode = '&verifyCode=' + this.verifyCode;
+    var URL = url+phone+verifyCode;
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    let data = {};
+    this.http.post(URL, JSON.stringify(data))
+      .map(res => res.json())
+      .subscribe(data => {
+        console.log('通过验证',data);
+        this.data = data.data;
+        this.success = data.success;
+        this.errMsg = data.errMsg
+        console.log(' this.success', this.success)
+
+        if(this.success == true){
+          this.navCtrl.push(changePasswordPage, {});
+        }
+        if(this.errMsg == "验证码出错"){
+          this.alert('验证码出错')
+        }
+      }, (err) => {
+        console.log(err);
+      });
+  }
+  else {
+    this.alert('填写信息不得为空')
+
+  }
+
+
+}
+
+  alert(sub) {
+    let alert = this.alertCtrl.create({
+      title: '提示!',
+      subTitle: sub,
+      buttons: ['好的']
+    });
+    alert.present();
+  }
+
+
+   settime(val) {
+  let countdown =30;
+  let settime
+  if (countdown == 0) {
+    val.removeAttribute("disabled");
+    this.YZM="免费获取验证码";
+    countdown = 30;
+  } else {
+    val.setAttribute("disabled", true);
+    val.value="重新发送(" + countdown + ")";
+    countdown--;
+  }
+  setTimeout(function() {
+    settime(val)
+  },1000)
+}
+
+}
+

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start (click)="modaleBack()">
+      <button ion-button icon-only color="royal">取消</button>
+    </ion-buttons>
+    <ion-title>分享</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid text-center padding class="color2">
+    <ion-label color="dark" stacked text-left padding-bottom>选择分享</ion-label>
+    <ion-row padding-bottom>
+      <ion-col width-25 (click)="shareWechat()">
+      <ion-icon name="weixin" item-left class="IconSize Wechat"></ion-icon><br>
+          <span class="IconFont">微信</span>
+      </ion-col>
+      <ion-col width-25  (click)="shareTimeline()">
+        <ion-icon name="pengyouquan" item-left class="IconSize Timeline"></ion-icon><br>
+         <span class="IconFont">朋友圈</span>
+      </ion-col>
+      <ion-col width-25 (click)="shareQQ()" >
+        <ion-icon name="qq" item-left class="IconSize QQ"></ion-icon><br>
+         <span class="IconFont">QQ</span>
+      </ion-col>
+      <ion-col width-25  (click)="shareQQZone()">
+        <ion-icon name="qqkongjian" item-left class="IconSize QQZone"></ion-icon><br>
+         <span class="IconFont">QQ空间</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

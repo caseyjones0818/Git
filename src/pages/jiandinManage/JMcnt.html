@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar color="cangzhen">
+        <ion-title>管理内容</ion-title>
+        <div (click)="goBack()"></div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="huise">
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+avatar+'-thumbnail25'}}">
+            </ion-avatar>
+            <h2>{{userName}}</h2>
+            <p>{{title}} ,{{categoryName}}</p>
+        </ion-item>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4 col-sm *ngFor="let img of imgList,let i = index">
+                    <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url +'-thumbnail25' + ')'}" (click)="push(JMcntdata, i)"></div>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-card-content [navPush]="jiandinPage">
+            <p>{{introduction}}</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col text-right>
+                <ion-note>
+                    {{insertDate| date:"yyyy-MM-dd"}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+        <ion-item >
+        <ion-label >鉴定结果输入区：</ion-label>
+        <ion-textarea rows="4" [(ngModel)]="content" type="text" placeholder="" ></ion-textarea>
+        </ion-item>
+          <button ion-button full (click)="fa()">发送</button>
+
+</ion-content>

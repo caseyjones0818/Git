@@ -1,0 +1,33 @@
+page-home {
+  $icon-width:6vh;
+  $control-color:#c72030;
+  $bannr:29%;
+  .iconImg{
+    width: $icon-width;
+  }
+  .slide-height{
+    height: $bannr;
+  }
+  .half {
+    width: 100% !important;
+    height: 29vw;
+    margin: 0 2px 2px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .home-title{
+    padding-left: 2%;
+    font-size: 13px;
+  }
+  .zuixin{
+    padding-left: 3%;
+    font-size: 15px;
+  }
+  .xiaozi{
+    font-size: 12px;
+  }
+  .huise{
+    color: #999;
+  }
+}

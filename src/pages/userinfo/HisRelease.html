@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>他的记录</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="cangpin">
+        藏品交流记录
+      </ion-segment-button>
+      <ion-segment-button value="jiandin">
+        藏品鉴定记录
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'cangpin'">
+      <div *ngFor="let i of cangpin_data" >
+        <div  *ngFor="let img of i.imgList">
+          <div  class="Myshoucang"  [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="pushcangpinDetailed(i)"></div>
+        </div>
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'jiandin'">
+      <div *ngFor="let i of jindin_data" >
+        <div  *ngFor="let img of i.imgList">
+          <div  class="Myshoucang"  [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="pushJiandinDetailed(i)"></div>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

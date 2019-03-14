@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-slides   #slider pager="true" zoom="true" [initialSlide]="index">
+    <ion-slide *ngFor="let imgs of img.imgList" >
+      <img src="{{ imgs.url }}"/>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

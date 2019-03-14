@@ -1,0 +1,172 @@
+
+  @font-face {font-family: "Ionicons";
+    src: url('../assets/myFont/iconfont.eot?t=1492581322297'); /* IE9*/
+    src: url('../assets/myFont/iconfont.eot?t=1492581322297#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../assets/myFont/iconfont.woff?t=1492581322297') format('woff'), /* chrome, firefox */
+    url('../assets/myFont/iconfont.ttf?t=1492581322297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../assets/myFont/iconfont.svg?t=1492581322297#iconfont') format('svg'); /* iOS 4.1- */
+  }
+
+  .icon {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .ion-md-chongzhi:before,
+  .ion-ios-chongzhi:before,
+  .ion-ios-chongzhi-outline:before {
+    content: "\343b";
+  }
+
+  .ion-md-wode:before,
+  .ion-ios-wode:before,
+  .ion-ios-wode-outline:before {
+    content: "\e649";
+  }
+
+  .ion-md-jia:before,
+  .ion-ios-jia:before,
+  .ion-ios-jia-outline:before {
+    content: "\e601";
+  }
+
+  .ion-md-shouye:before,
+  .ion-ios-shouye:before,
+  .ion-ios-shouye-outline:before {
+    content: "\e620";
+  }
+
+  .ion-md-quan:before,
+  .ion-ios-quan:before,
+  .ion-ios-quan-outline:before {
+    content: "\e8c2";
+  }
+
+  .ion-md-zhuanjibi:before,
+  .ion-ios-zhuanjibi:before,
+  .ion-ios-zhuanjibi-outline:before {
+    content: "\e613";
+  }
+
+  .ion-md-pinglun:before,
+  .ion-ios-pinglun:before,
+  .ion-ios-pinglun-outline:before {
+    content: "\e621";
+  }
+
+  .ion-md-vip:before,
+  .ion-ios-vip:before,
+  .ion-ios-vip-outline:before {
+    content: "\e66b";
+  }
+
+  .ion-md-yaoqin:before,
+  .ion-ios-yaoqin:before,
+  .ion-ios-yaoqin-outline:before {
+    content: "\e670";
+  }
+  .ion-md-xiaoxi:before,
+  .ion-ios-xiaoxi:before,
+  .ion-ios-xiaoxi-outline:before {
+    content: "\e8c0";
+  }
+  .ion-md-shangcheng:before,
+  .ion-ios-shangcheng:before,
+  .ion-ios-shangcheng-outline:before {
+    content: "\e714";
+  }
+
+  .ion-md-shoucang:before,
+  .ion-ios-shoucang:before,
+  .ion-ios-shoucang-outline:before {
+    content: "\e635";
+  }
+  .ion-md-buguanzhu:before,
+  .ion-ios-buguanzhu:before,
+  .ion-ios-buguanzhu-outline:before {
+    content: "\e630";
+  }
+
+  .ion-md-guanzhu:before,
+  .ion-ios-guanzhu:before,
+  .ion-ios-guanzhu-outline:before {
+    content: "\e6ce";
+  }
+
+  .ion-md-bi:before,
+   .ion-ios-bi:before,
+   .ion-ios-bi-outline:before {
+     content: "\e892";
+   }
+
+  .ion-md-vip1:before,
+  .ion-ios-vip1:before,
+  .ion-ios-vip1-outline:before {
+    content: "\e600";
+  }
+  //.icon-chongzhi:before { content: "\343b"; }
+  //
+  //.icon-shoucang:before { content: "\e635"; }
+  //
+  //.icon-fenxiang:before { content: "\e636"; }
+  //
+  //.icon-shoucang1:before { content: "\e611"; }
+  //
+  //.icon-qq:before { content: "\e616"; }
+  //
+  //.icon-jilu:before { content: "\e604"; }
+  //
+  //.icon-qqkongjian:before { content: "\e6df"; }
+  //
+  //.icon-xiao47:before { content: "\e892"; }
+  //
+  //.icon-wode:before { content: "\e649"; }
+  //
+  //.icon-pengyouquan:before { content: "\e888"; }
+  //
+  //.icon-weixin:before { content: "\e60d"; }
+  //
+  //.icon-wodexiaoxi:before { content: "\e8c0"; }
+  //
+  //.icon-zuimeijinbishangcheng:before { content: "\e714"; }
+  //
+  //.icon-icon:before { content: "\e63c"; }
+  //
+  //.icon-qiandao-copy:before { content: "\e603"; }
+  //
+  //.icon-wodepinglun:before { content: "\e621"; }
+  //
+  //.icon-shouye:before { content: "\e620"; }
+  //
+  //.icon-jia:before { content: "\e601"; }
+  //
+  //.icon-yaoqing:before { content: "\e670"; }
+  //
+  //.icon-rewardsolid:before { content: "\e655"; }
+  //
+  //.icon-vip:before { content: "\e66b"; }
+  //
+  //.icon-vip1:before { content: "\e600"; }
+  //
+
+  //
+
+  //
+  //.icon-fenxiangzhuanjinbi-:before { content: "\e613"; }
+  //
+  //.icon-home:before { content: "\e508"; }
+  //
+  //.icon-shejiao-pengyouquan:before { content: "\e8c2"; }
+  //
+  //.icon-jinbi:before { content: "\e78d"; }
+  //
+  //
+  //

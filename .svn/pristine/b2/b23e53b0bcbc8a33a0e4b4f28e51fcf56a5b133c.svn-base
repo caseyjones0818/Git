@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-buttons start >
+      <button ion-button icon-only color="royal" (click)="clean()">取消</button>
+    </ion-buttons>
+    <ion-title>
+      发布藏品
+    </ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="upload()" [disabled]="content.length === 0">
+        <p>发送</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+<ion-toolbar no-border-top>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="jiaoliu">
+      藏品交流
+    </ion-segment-button>
+    <ion-segment-button value="jiandin">
+      藏品鉴定
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'jiaoliu'">
+      <ion-item>
+        <ion-label color="dark" >藏品标题：</ion-label>
+        <ion-input placeholder="请输入藏品标题" [(ngModel)]="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >藏品类：</ion-label>
+        <ion-select  [(ngModel)]="festId" (ionChange)="festSelected($event, festId)">
+          <ion-option *ngFor="let i of categoryList" value="{{i.id}}">{{i.categoryName}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label floating>请输入藏品描述...</ion-label>
+        <ion-textarea rows="4" [(ngModel)]="content"></ion-textarea>
+      </ion-item>
+      <div class="imgContainer marginLeft10" *ngIf="imagePaths.length>0">
+        <div>
+          <img class="manyImg" *ngFor="let image of imagePaths" [src]=image >
+          <div class="clearFloat"></div>
+        </div>
+      </div>
+      <img src="assets/img/add.png" class="imgAdd" tappable (click)="addImg()" *ngIf="imagePaths.length<6">
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'jiandin'">
+
+    </ion-list>
+
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>收藏夹</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <div *ngFor="let i of data" >
+    <div  *ngFor="let img of i.imgList">
+      <div  class="Myshoucang"  [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="pushcangpinDetailed(i)"></div>
+    </div>
+  </div>
+
+</ion-content>

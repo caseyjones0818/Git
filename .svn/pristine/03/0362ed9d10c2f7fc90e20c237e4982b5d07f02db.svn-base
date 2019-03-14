@@ -1,0 +1,124 @@
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
+import {Storage} from '@ionic/storage';
+import {Http, Headers} from '@angular/http';
+import {AlertController} from 'ionic-angular';
+import 'rxjs/add/operator/map';
+import {TabsPage} from '../tabs/tabs';
+import {RegisterAccountPage} from '../RegisterAccount/RegisterAccount';
+import {forgetPasswordPage} from '../LoginInterface/forgetPassword';
+import { JPushService } from 'ionic2-jpush/dist';
+
+import {md5} from '../../service/md5';
+import {Constant} from '../../service/Constant'
+
+
+@Component({
+  selector: 'page-LoginInterface',
+  templateUrl: 'LoginInterface.html',
+  providers  : [JPushService]
+})
+export class LoginInterfacePage {
+  // rootPage = TabsPage;
+  password: any;
+  token: any;
+  RegisterAccountPage = RegisterAccountPage;
+  forgetPasswordPage = forgetPasswordPage;
+  phone
+  account
+  login_data
+  storage
+  errMsg
+  success
+  storage_account
+  storage_password
+  data
+  notoken
+  jPush
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,
+              public alertCtrl: AlertController,
+              private jPushPlugin: JPushService) {
+    this.storage = storage;
+    this.jPush = jPushPlugin;
+
+  }
+
+  go() {
+    let e = this.password && this.account;
+    //判断账号密码是否为空
+
+    if (e != null && e != '') {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      // headers.append('Access-Control-Allow-Origin','http://localhost');
+      let data = {};
+      let md5_password = md5(this.password);
+      var url = Constant.APP_URL + 'sc/api/login/login?';
+      let account = 'account=' + this.account;
+      let password = '&password=' + md5_password;
+      let login_URL = url + account + password;
+      this.http.post(login_URL, JSON.stringify(data))
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log(data)
+          this.login_data = data.data;
+
+          if (this.login_data == null) {
+            let alert = this.alertCtrl.create({
+              title: '提示!',
+              subTitle: '密码错误!',
+              buttons: ['好的']
+            });
+            alert.present();
+          }
+          else {
+            this.token = data.data.token;
+            this.phone = data.data.phone;
+            this.errMsg = data.data.errMsg;
+            //跳转首页
+            this.navCtrl.push(TabsPage, {
+              token: this.token,
+            });
+            this.storage.set('account', this.account)
+            this.storage.set('password', this.password)
+            this.storage.set('token', this.token)
+            console.log('登入保存token',this.token)
+            this.storage.set('phone', this.phone)
+            this.storage.set('login_data', this.login_data)
+            //极光推送
+            // this.jPushPlugin.init();
+            this.jPush.init();
+            //this.jPushPlugin.
+            this.jPush.setAlias(this.account);
+          }
+
+        }, (err) => {
+          console.log(err);
+        });
+    }
+    else {
+      this.alert('登入信息不得为空!')
+    }
+  }
+
+  alert(sub) {
+    let alert = this.alertCtrl.create({
+      title: '提示!',
+      subTitle: sub,
+      buttons: ['好的']
+    });
+    alert.present();
+  }
+  youke(){
+    this.navCtrl.push(TabsPage, {
+      //传1到tab页，然后存储。（为1时首页上显示'去注册'）
+      notoken: 'notoken',
+    });
+
+  }
+
+}
+

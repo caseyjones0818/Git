@@ -1,0 +1,29 @@
+page-LoginInterface{
+  $logo:80vh;
+  $login-margin: 17%;
+  $cuti:600;
+  .logo-size{
+    width: $logo;
+  }
+  .login-p-margin{
+    margin-top:$login-margin ;
+  }
+  .cuti{
+    font-weight:$cuti ;
+  }
+  .login-button{
+    height: 4%;
+    margin-top: 10%;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .footName{
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 0%;
+    color: #999;
+    font-size: 2vh;
+  }
+}

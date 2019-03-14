@@ -1,0 +1,73 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com-sarriaroman-photoviewer": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-flashlight": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-http": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-photo-library": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "mx.ferreyra.callnumber": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.myapp409561"
+        }
+    }
+}

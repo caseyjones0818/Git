@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>填写求购</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <p>发布</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">标题：</ion-label>
+      <ion-input placeholder="请输入标题，最多15字"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>藏品类别</ion-label>
+      <ion-select [(ngModel)]="os" submitText="Okay" cancelText="Nah">
+        <ion-option value="dos">DOS</ion-option>
+        <ion-option value="lunix">Linux</ion-option>
+        <ion-option value="mac7">Mac OS 7</ion-option>
+        <ion-option value="mac8">Mac OS 8</ion-option>
+        <ion-option value="win3.1">Windows 3.1</ion-option>
+        <ion-option value="win95">Windows 95</ion-option>
+        <ion-option value="win98">Windows 98</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark" stacked>求购详情：</ion-label>
+      <ion-textarea padding placeholder="备注信息：预算，对摄影的要求等（最少10字，最多300字）..." [(ngModel)]="jiaoliuTextarea"></ion-textarea>
+    </ion-item>
+  </ion-list>
+</ion-content>

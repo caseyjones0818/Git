@@ -1,0 +1,143 @@
+import { Component } from '@angular/core';
+import { NavController,ModalController,AlertController,ViewController,NavParams} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+import { QuanImgPage } from  '../QuanImg';
+import { userinfoPage } from  '../../userinfo/userinfo';
+
+@Component({
+  selector: 'page-quan',
+  templateUrl: 'jiandin.html'
+})
+export class jiandinPage {
+  userinfoPage:any = userinfoPage;
+  testRadioOpen: boolean;
+  testRadioResult;
+  DetailsImport:any;
+  urlDetails:any;
+  userName:any;
+  avatar:any;
+  imgList:any;
+  introduction:any;
+  famousName:any;
+  insertDate:any;
+  updateDate:any;
+  title:any;
+  categoryName:any;
+  id:any;
+  userId
+  identifyResult
+  constructor(
+    public navCtrl: NavController,
+    public modalCtrl: ModalController,
+    public alerCtrl: AlertController,
+    public viewCtrl: ViewController,
+    public navParams: NavParams,
+    private http: Http,
+    storage: Storage,
+  ) {
+
+    var url = 'http://120.132.92.55/sc_api/sc/api/shou/appraisalDetail?';
+    var token;
+    storage.get('token').then((val) => {
+      console.log("val:"+val)
+      token=val;
+    })
+
+//鉴定列表ID 传值
+    this.id = navParams.get('id')
+    console.log(this.id.id);
+    var id = this.id.id
+    var userId = this.id.userId
+    this.userId = userId
+    var params="id="+id;
+    if (token!=null){
+      params+="&token="+token;
+    }
+
+//详情页数据请求
+    this.http.get(url+params).map(res => res.json()).subscribe(data => {
+      this.urlDetails = data.data;
+      this.userName = data.data.userName;
+      this.avatar = data.data.avatar;
+      this.imgList = data.data.imgList;
+      this.introduction = data.data.introduction;
+      this.famousName = data.data.famousName;
+      this.insertDate = data.data.insertDate;
+      this.updateDate = data.data.updateDate;
+      this.title = data.data.title;
+      this.identifyResult = data.data.identifyResult
+      this.categoryName = data.data.categoryName;
+      console.log(url+params)
+      console.log('Data',this.urlDetails);
+    })
+
+  }
+
+  //图片查看器
+  push= (img:any, index:number): any =>{
+    this.navCtrl.push(QuanImgPage, {
+      'img':img,
+      'index': index,
+
+    });
+    console.log('详情点击图片',img)
+  }
+  //跳转用户信息页
+  pushUserinfoPage=(userId:any):any =>{
+    this.navCtrl.push(userinfoPage, {
+      'userId':userId
+    });
+  }
+  //打赏功能模块
+  doRadio() {
+    let alert = this.alerCtrl.create();
+    alert.setTitle('打赏鉴定师金币');
+    alert.addInput({
+      type: 'radio',
+      label: '88',
+      value: '88',
+      checked: true
+    });
+    alert.addInput({
+      type: 'radio',
+      label: '188',
+      value: '188'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: '388',
+      value: '388'
+    });
+    alert.addInput({
+      type: 'radio',
+      label: '888',
+      value: '888'
+    });
+    alert.addButton('取消');
+    alert.addButton({
+      text: '确认',
+      handler: data => {
+        console.log('Radio data:', data);
+        this.testRadioOpen = false;
+        this.testRadioResult = data;
+      }
+    });
+
+    alert.present().then(() => {
+      this.testRadioOpen = true;
+    });
+  }
+//头部返回模块
+  goBack() {
+    this.navCtrl.pop();
+  }
+
+
+}
+
+
+
+

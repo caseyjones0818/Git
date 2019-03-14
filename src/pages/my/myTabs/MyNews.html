@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>我的消息</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngFor="let i of data">
+    <ion-avatar item-left (click)="sixin(i.userId)">
+      <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+i.avatar+'-thumbnail25'}}">
+    </ion-avatar>
+    <h2 style=" font-size: 14px">{{i.userName}}</h2>
+    <div style=" font-size: 14px"  (click)="pushJiandinDetailed(i)"> {{i.content}}</div>
+    <p text-right>{{i.insertDate | date:"yyyy-MM-dd"}}</p>
+  </ion-item>
+<!--(click)="sixin(i.userId)"-->
+</ion-content>

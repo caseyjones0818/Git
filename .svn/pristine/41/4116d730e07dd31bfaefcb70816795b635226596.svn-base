@@ -1,0 +1,154 @@
+import { Component, ViewChild, } from '@angular/core';
+import { Http ,Headers} from '@angular/http';
+import { Storage } from '@ionic/storage';
+import 'rxjs/add/operator/map';
+
+import { RechargePage } from '../my/myTabs/Recharge';
+import { QuanPage } from '../quan/quan';
+import { ContactPage } from '../contact/contact';
+import { jiandinPage } from '../quan/QuanTabs/jiandin';
+import { EarnGoldPage } from '../my/myTabs/EarnGold';
+import {Constant} from '../../service/Constant'
+import { LoginInterfacePage } from '../LoginInterface/LoginInterface';
+import {RegisterAccountPage} from '../RegisterAccount/RegisterAccount';
+
+
+import { NavController,ToastController, Slides,NavParams } from 'ionic-angular';
+
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+
+export class HomePage {
+  pet: string = "puppies";
+  EarnGoldPage:any = EarnGoldPage;
+  RechargePage :any = RechargePage;
+  QuanPage :any = QuanPage;
+  ContactPage:any = ContactPage;
+  jiandinPage :any =jiandinPage;
+  RegisterAccountPage = RegisterAccountPage;
+  appraisalNewLists: any;
+  banners:any;
+  success:any;
+  index
+  id
+  sign
+  point
+  storage
+  notoken
+  promoSlider
+
+  // homeOptions = {
+  //   initialSlide: 0,
+  //   loop: true,
+  //   autoplay:2000,
+  //   pager:true
+  // };
+  @ViewChild('Slides') mySlide: Slides;
+  constructor(public toastCtrl: ToastController, public navCtrl: NavController, private http: Http, storage: Storage,private navParams: NavParams) {
+  this.storage=storage;
+    // let token = navParams.get('token');
+    // console.log('首页navParams的token',token )
+
+    storage.get('token').then((val) => {
+        console.log('首页获得的token', val)
+        var token='token='+ val;
+        var url = 'http://120.132.92.55/sc_api/sc/api/home/homeIndex?';
+        this.http.get(url+token).map(res => res.json()).subscribe(data => {
+            if(data.success == true){
+              this.appraisalNewLists = data.data.appraisalNewList;
+              this.id = data.data.appraisalNewList.id;
+              this.sign = data.data.sign.sign;
+              this.point =data.data.sign.point
+              this.banners = data.data.bannerList;
+              console.log('首页数据',data);
+              console.log('this.sign ',this.sign );
+
+            }
+            else {
+              console.log('接口访问出错')
+            }
+          },
+          err => {
+            console.log('报错');
+          });
+      });
+
+    // storage.get('notoken').then((val) => {
+    //   console.log('notoken', val)
+    //   this.notoken=val;
+    //
+    // })
+
+  }
+  //签到数据UI
+  qiandao(){
+    this.storage.get('token').then((val) => {
+        console.log('token', val);
+        var token='token='+val;
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      let data = {};
+      var url = Constant.APP_URL + 'sc/api/user/addSignature?';
+      this.http.post(url+token, JSON.stringify(data))
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log('签到',data);
+
+            var url = 'http://120.132.92.55/sc_api/sc/api/home/homeIndex?';
+            this.http.get(url+token).map(res => res.json()).subscribe(data => {
+                if(data.success == true){
+                  this.appraisalNewLists = data.data.appraisalNewList;
+                  this.id = data.data.appraisalNewList.id;
+                  this.sign = data.data.sign.sign;
+                  this.point =data.data.sign.point
+                  this.banners = data.data.bannerList;
+                  console.log('首页数据',data);
+                  console.log('this.sign ',this.sign );
+
+                }
+                else {
+                  console.log('接口访问出错')
+                }
+              },
+              err => {
+                console.log('报错');
+              });
+
+        }, (err) => {
+          console.log(err);
+        });
+      })
+
+  }
+  showToast(position: string) {
+    let toast = this.toastCtrl.create({
+      message: '今日已签到，请明日再来！',
+      duration: 1000,
+      position: position
+    });
+
+    toast.present(toast);
+  }
+
+
+  pushJiandinDetailed= (id:any): any =>{
+    this.navCtrl.push(jiandinPage, {
+      'id': id,
+    });
+  }
+
+
+  // onPromoSlideChanged() {
+  //   alert('ABC');
+  //   this.promoSlider.options = this.homeOptions;
+  //   this.promoSlider.rapidUpdate();
+  //   //What should i do in this method?
+  //
+  // };
+
+}
+
+

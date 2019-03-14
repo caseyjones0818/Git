@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>VIP专区</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="assets/img/vip-banner.jpg" class="banner" [navPush]="VIPserviceDetailsPage" />
+    <ion-grid text-center margin-top>
+      <ion-row>
+        <ion-col width-33 [navPush]="HomeImprovementPage"><img src="assets/img/vip0.png">
+        </ion-col>
+        <ion-col width-33 [navPush]="ConsignmentHostingPage" *ngIf="lv>=2"><img src="assets/img/vip1.png">
+        </ion-col>
+         <ion-col width-33  *ngIf="lv<2||token==null"><img src="assets/img/vip-1.png">
+        </ion-col>
+        <ion-col width-33 [navPush]="RepairConsultationPage" *ngIf="lv>=3"><img src="assets/img/vip2.png">
+        </ion-col>
+        <ion-col width-33  *ngIf="lv<3||token==null"><img src="assets/img/vip-2.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-33 [navPush]="PhotographyPage" *ngIf="lv>=4"><img src="assets/img/vip3.png">
+        </ion-col>
+        <ion-col width-33  *ngIf="lv<4||token==null"><img src="assets/img/vip-3.png">
+        </ion-col>
+        <ion-col width-33 [navPush]="ConsultantPage" *ngIf="lv>=5"><img src="assets/img/vip4.png">
+        </ion-col>
+         <ion-col width-33  *ngIf="lv<5||token==null"><img src="assets/img/vip-4.png">
+        </ion-col>
+        <ion-col width-33 [navPush]="BuyingInformationPage" *ngIf="lv>=6"><img src="assets/img/vip5.png">
+        </ion-col>
+         <ion-col width-33  *ngIf="lv<6||token==null"><img src="assets/img/vip-5.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-33><img src="assets/img/vip-6.png">
+        </ion-col>
+        <ion-col width-33><img src="assets/img/vip-7.png">
+        </ion-col>
+        <ion-col width-33><img src="assets/img/vip-8.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

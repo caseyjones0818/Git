@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b61b1efb-8ba4-4d88-87af-5263ff069162" name="默认" comment="默认">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/LoginInterface/forgetPassword.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/LoginInterface/forgetPassword.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/contact/common-release.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/contact/common-release.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/contact/common-release.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/contact/image-param.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/srarch/srarch.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/srarch/srarch.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/srarch/srarch.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/userinfo/HisComments.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/userinfo/HisComments.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/userinfo/HisRelease.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/userinfo/HisRelease.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/service/upload.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/vip-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/vip-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/vip-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/srarch" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/VIP/BuyingInformation/ResponseToPurchase/ResponseToPurchase.ts" afterPath="$PROJECT_DIR$/src/pages/VIP/BuyingInformation/ResponseToPurchase/ResponseToPurchase.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/VIP/HomeImprovement/HomeImprovement.ts" afterPath="$PROJECT_DIR$/src/pages/VIP/HomeImprovement/HomeImprovement.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contact/contact.html" afterPath="$PROJECT_DIR$/src/pages/contact/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contact/contact.ts" afterPath="$PROJECT_DIR$/src/pages/contact/contact.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanImg.html" afterPath="$PROJECT_DIR$/src/pages/quan/QuanImg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.html" afterPath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.ts" afterPath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.html" afterPath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.ts" afterPath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.html" afterPath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.ts" afterPath="$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/quan.html" afterPath="$PROJECT_DIR$/src/pages/quan/quan.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/quan.scss" afterPath="$PROJECT_DIR$/src/pages/quan/quan.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/quan/quan.ts" afterPath="$PROJECT_DIR$/src/pages/quan/quan.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/theme/variables.scss" afterPath="$PROJECT_DIR$/src/theme/variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/main.css" afterPath="$PROJECT_DIR$/www/build/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/main.js" afterPath="$PROJECT_DIR$/www/build/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/build/main.js.map" afterPath="$PROJECT_DIR$/www/build/main.js.map" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="myApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>categoryName</find>
+      <find>data</find>
+      <find>pushUserinfoPage</find>
+      <find>.tab-button-icon</find>
+      <find>user</find>
+      <find>this.token</find>
+      <find>this.followId</find>
+      <find>put_position</find>
+      <find>jiaoliuInterface</find>
+      <find>doInfiniteJiaoliu</find>
+      <find>httpDataJiaoliu</find>
+      <find>pageInde</find>
+      <find>responseIds</find>
+      <find>i</find>
+      <find>category_id</find>
+      <find>homeOptions</find>
+      <find>autoplay</find>
+      <find>comment</find>
+      <find>pushJiandinDetailed</find>
+      <find>ContactPage</find>
+      <find>CommonReleaseCtrl</find>
+      <find>token</find>
+      <find>statusContent</find>
+      <find>PictureSourceType</find>
+      <find>pathForImage</find>
+      <find>fourImgContainer</find>
+      <find>imagesSelected</find>
+      <find>emitImagesData</find>
+      <find>imagePaths</find>
+      <find>ImagePickerOptions</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/pages/userinfo/userinfo.ts" />
+        <option value="$PROJECT_DIR$/src/pages/my/myTabs/EarnGold.ts" />
+        <option value="$PROJECT_DIR$/src/pages/my/myTabs/EarnGold.html" />
+        <option value="$PROJECT_DIR$/src/pages/userinfo/HisRelease.html" />
+        <option value="$PROJECT_DIR$/src/pages/my/myTabs/PublishingCollections.html" />
+        <option value="$PROJECT_DIR$/src/pages/my/myTabs/PublishingCollections.ts" />
+        <option value="$PROJECT_DIR$/src/pages/my/myTabs/Favorite.html" />
+        <option value="$PROJECT_DIR$/src/pages/my/myTabs/Favorite.ts" />
+        <option value="$PROJECT_DIR$/src/pages/userinfo/HisRelease.ts" />
+        <option value="$PROJECT_DIR$/src/service/timer.ts" />
+        <option value="$PROJECT_DIR$/src/pages/RegisterAccount/RegisterAccount.ts" />
+        <option value="$PROJECT_DIR$/src/pages/RegisterAccount/RegisterAccount.html" />
+        <option value="$PROJECT_DIR$/src/pages/LoginInterface/LoginInterface.scss" />
+        <option value="$PROJECT_DIR$/src/pages/home/home.html" />
+        <option value="$PROJECT_DIR$/src/pages/LoginInterface/forgetPassword.html" />
+        <option value="$PROJECT_DIR$/src/pages/LoginInterface/forgetPassword.ts" />
+        <option value="$PROJECT_DIR$/src/pages/VIP/HomeImprovement/HomeImprovement.html" />
+        <option value="$PROJECT_DIR$/src/pages/VIP/VIP.html" />
+        <option value="$PROJECT_DIR$/src/pages/my/changePassword/changePassword.html" />
+        <option value="$PROJECT_DIR$/src/app/app.html" />
+        <option value="$PROJECT_DIR$/src/pages/my/changePassword/changePassword.ts" />
+        <option value="$PROJECT_DIR$/src/pages/my/my.html" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/tabs.ts" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/tabs.html" />
+        <option value="$PROJECT_DIR$/src/pages/LoginInterface/LoginInterface.html" />
+        <option value="$PROJECT_DIR$/src/pages/LoginInterface/LoginInterface.ts" />
+        <option value="$PROJECT_DIR$/src/pages/my/my.ts" />
+        <option value="$PROJECT_DIR$/src/pages/contact/image-param.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/pages/contact/common-release.scss" />
+        <option value="$PROJECT_DIR$/src/pages/contact/common-release.ts" />
+        <option value="$PROJECT_DIR$/src/pages/contact/common-release.html" />
+        <option value="$PROJECT_DIR$/src/service/upload.service.ts" />
+        <option value="$PROJECT_DIR$/src/pages/contact/contact.ts" />
+        <option value="$PROJECT_DIR$/src/pages/contact/contact.html" />
+        <option value="$PROJECT_DIR$/src/pages/home/home.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/src/pages/VIP/HomeImprovement/HomeImprovement.ts" />
+        <option value="$PROJECT_DIR$/src/pages/VIP/BuyingInformation/ResponseToPurchase/ResponseToPurchase.ts" />
+        <option value="$PROJECT_DIR$/src/pages/quan/quan.html" />
+        <option value="$PROJECT_DIR$/src/pages/quan/quan.ts" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanImg.ts" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanImg.html" />
+        <option value="$PROJECT_DIR$/src/pages/quan/quan.scss" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.html" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.ts" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.html" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.ts" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.ts" />
+        <option value="$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.html" />
+        <option value="$PROJECT_DIR$/src/theme/variables.scss" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="104" />
+    <option name="y" value="23" />
+    <option name="width" value="1453" />
+    <option name="height" value="953" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic_cllc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="G:/nodejs/node" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="G:\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="SearchEverywhereHistoryKey" value="changePassword&#9;FILE&#9;file:///Users/xiaoxiaohui/Documents/myApp/src/pages/my/changePassword/changePassword.ts&#10;main.css&#9;FILE&#9;file:///Users/xiaoxiaohui/Documents/myApp/www/build/main.css" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/service" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/pages/quan" />
+      <recent name="$PROJECT_DIR$/src/pages/LoginInterface" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/img" />
+      <recent name="$PROJECT_DIR$/src/assets/myFont" />
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/pages/contact" />
+      <recent name="$PROJECT_DIR$/src/service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.forgetPassword.html">
+    <configuration default="false" name="forgetPassword.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ionic_cllc/src/pages/LoginInterface/forgetPassword.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.forgetPassword.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.forgetPassword.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/.idea" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b61b1efb-8ba4-4d88-87af-5263ff069162" name="默认" comment="" />
+      <created>1488187079576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1488187079576</updated>
+      <workItem from="1488187086145" duration="1344000" />
+      <workItem from="1488247520162" duration="13977000" />
+      <workItem from="1488271352581" duration="247000" />
+      <workItem from="1488271919965" duration="5073000" />
+      <workItem from="1488283366526" duration="5829000" />
+      <workItem from="1488333868865" duration="11842000" />
+      <workItem from="1488351126347" duration="1037000" />
+      <workItem from="1488359039847" duration="3258000" />
+      <workItem from="1488362770139" duration="1171000" />
+      <workItem from="1488434130133" duration="8345000" />
+      <workItem from="1488507702227" duration="15860000" />
+      <workItem from="1488766914213" duration="180000" />
+      <workItem from="1488770046259" duration="13769000" />
+      <workItem from="1488803761787" duration="4889000" />
+      <workItem from="1488857054833" duration="11000" />
+      <workItem from="1488863896161" duration="11700000" />
+      <workItem from="1488879323198" duration="1945000" />
+      <workItem from="1488937820905" duration="1330000" />
+      <workItem from="1488954981481" duration="906000" />
+      <workItem from="1488961463711" duration="5909000" />
+      <workItem from="1488974280264" duration="1941000" />
+      <workItem from="1489024834377" duration="12404000" />
+      <workItem from="1489114029681" duration="6385000" />
+      <workItem from="1489128842870" duration="1203000" />
+      <workItem from="1489133899013" duration="598000" />
+      <workItem from="1489374510404" duration="12194000" />
+      <workItem from="1489408485432" duration="1570000" />
+      <workItem from="1489496110819" duration="824000" />
+      <workItem from="1489497875136" duration="58000" />
+      <workItem from="1489498711153" duration="271000" />
+      <workItem from="1489543212905" duration="5560000" />
+      <workItem from="1489561733107" duration="576000" />
+      <workItem from="1489562384581" duration="1529000" />
+      <workItem from="1489564600451" duration="2317000" />
+      <workItem from="1489636077173" duration="3385000" />
+      <workItem from="1489647086868" duration="3019000" />
+      <workItem from="1489659039647" duration="4000" />
+      <workItem from="1489716228574" duration="3333000" />
+      <workItem from="1489735078211" duration="174000" />
+      <workItem from="1489736353141" duration="3685000" />
+      <workItem from="1489800873530" duration="6000" />
+      <workItem from="1489921196602" duration="1820000" />
+      <workItem from="1489925917311" duration="2456000" />
+      <workItem from="1489994823493" duration="841000" />
+      <workItem from="1490012471220" duration="426000" />
+      <workItem from="1490061100529" duration="10975000" />
+      <workItem from="1490087932604" duration="2291000" />
+      <workItem from="1490149509296" duration="8502000" />
+      <workItem from="1490162942960" duration="302000" />
+      <workItem from="1490163665000" duration="6771000" />
+      <workItem from="1490238293715" duration="2933000" />
+      <workItem from="1490247937524" duration="3664000" />
+      <workItem from="1490256753358" duration="2676000" />
+      <workItem from="1490270766566" duration="4254000" />
+      <workItem from="1490321080060" duration="13014000" />
+      <workItem from="1490360376859" duration="3126000" />
+      <workItem from="1490364100827" duration="172000" />
+      <workItem from="1490433489414" duration="565000" />
+      <workItem from="1490579305685" duration="8757000" />
+      <workItem from="1490597146732" duration="4964000" />
+      <workItem from="1490607024488" duration="519000" />
+      <workItem from="1490611246517" duration="67000" />
+      <workItem from="1490616512724" duration="215000" />
+      <workItem from="1490617462493" duration="788000" />
+      <workItem from="1490623520039" duration="899000" />
+      <workItem from="1490625217479" duration="76000" />
+      <workItem from="1490625692872" duration="650000" />
+      <workItem from="1490666567375" duration="2747000" />
+      <workItem from="1490686740389" duration="596000" />
+      <workItem from="1490700190682" duration="9844000" />
+      <workItem from="1490753579938" duration="13664000" />
+      <workItem from="1490781412844" duration="451000" />
+      <workItem from="1490781899231" duration="213000" />
+      <workItem from="1490782130930" duration="763000" />
+      <workItem from="1490787376121" duration="3209000" />
+      <workItem from="1490839608885" duration="17871000" />
+      <workItem from="1490870412564" duration="351000" />
+      <workItem from="1490926782414" duration="5055000" />
+      <workItem from="1490952705100" duration="712000" />
+      <workItem from="1490953615450" duration="49000" />
+      <workItem from="1491011947454" duration="185000" />
+      <workItem from="1491012255389" duration="100000" />
+      <workItem from="1491013367329" duration="315000" />
+      <workItem from="1491015059912" duration="6000" />
+      <workItem from="1491017665744" duration="111000" />
+      <workItem from="1491018237836" duration="235000" />
+      <workItem from="1491018662704" duration="206000" />
+      <workItem from="1491022872063" duration="13000" />
+      <workItem from="1491023884356" duration="310000" />
+      <workItem from="1491024383639" duration="130000" />
+      <workItem from="1491024857320" duration="343000" />
+      <workItem from="1491026766392" duration="8000" />
+      <workItem from="1491026834382" duration="230000" />
+      <workItem from="1491028468339" duration="283000" />
+      <workItem from="1491029049630" duration="236000" />
+      <workItem from="1491030095925" duration="141000" />
+      <workItem from="1491030405493" duration="240000" />
+      <workItem from="1491030699107" duration="5740000" />
+      <workItem from="1491042072621" duration="1438000" />
+      <workItem from="1491047310434" duration="3998000" />
+      <workItem from="1491139727632" duration="421000" />
+      <workItem from="1491187016711" duration="10483000" />
+      <workItem from="1491357569655" duration="7947000" />
+      <workItem from="1491373369203" duration="632000" />
+      <workItem from="1491374690535" duration="7278000" />
+      <workItem from="1491383806419" duration="3324000" />
+      <workItem from="1491388932972" duration="362000" />
+      <workItem from="1491447189615" duration="5965000" />
+      <workItem from="1491456195554" duration="2535000" />
+      <workItem from="1491459766305" duration="4828000" />
+      <workItem from="1491473393625" duration="839000" />
+      <workItem from="1491530549078" duration="887000" />
+      <workItem from="1491533859261" duration="3312000" />
+      <workItem from="1491539205941" duration="9732000" />
+      <workItem from="1491558861749" duration="9000" />
+      <workItem from="1491637274794" duration="228000" />
+      <workItem from="1491646296849" duration="8740000" />
+      <workItem from="1491788939209" duration="11527000" />
+      <workItem from="1491806543980" duration="633000" />
+      <workItem from="1491807919981" duration="11734000" />
+      <workItem from="1491827277828" duration="30922000" />
+      <workItem from="1492048046447" duration="14061000" />
+      <workItem from="1492070609643" duration="5503000" />
+      <workItem from="1492134228222" duration="5805000" />
+      <workItem from="1492150963396" duration="6258000" />
+      <workItem from="1492332266678" duration="3104000" />
+      <workItem from="1492393925788" duration="12215000" />
+      <workItem from="1492416866121" duration="4626000" />
+      <workItem from="1492479817160" duration="12235000" />
+      <workItem from="1492499408820" duration="5461000" />
+      <workItem from="1492565572757" duration="18796000" />
+      <workItem from="1492654639403" duration="10010000" />
+      <workItem from="1492674304311" duration="5939000" />
+      <workItem from="1492738624200" duration="13424000" />
+      <workItem from="1492820676175" duration="192000" />
+      <workItem from="1492838419336" duration="267000" />
+      <workItem from="1492856674114" duration="1547000" />
+      <workItem from="1492998335569" duration="15245000" />
+      <workItem from="1493084506755" duration="19457000" />
+      <workItem from="1493170516053" duration="15032000" />
+      <workItem from="1493203582661" duration="432000" />
+      <workItem from="1493210532883" duration="2289000" />
+      <workItem from="1493257441194" duration="10706000" />
+      <workItem from="1493282882615" duration="566000" />
+      <workItem from="1493283866635" duration="1033000" />
+      <workItem from="1493344620263" duration="11263000" />
+      <workItem from="1493373956683" duration="124000" />
+      <workItem from="1493374228568" duration="198000" />
+      <workItem from="1493375128518" duration="792000" />
+      <workItem from="1493691251561" duration="6686000" />
+      <workItem from="1493701429266" duration="19138000" />
+      <workItem from="1493776355369" duration="6390000" />
+      <workItem from="1493789708777" duration="2473000" />
+      <workItem from="1493792640185" duration="4604000" />
+      <workItem from="1493801372975" duration="9848000" />
+      <workItem from="1493863205147" duration="22577000" />
+      <workItem from="1493949198651" duration="25756000" />
+      <workItem from="1493984677985" duration="454000" />
+      <workItem from="1494207901160" duration="1208000" />
+      <workItem from="1494299357827" duration="1264000" />
+    </task>
+    <task id="LOCAL-00001" summary="默认">
+      <created>1493691298028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1493691298028</updated>
+    </task>
+    <task id="LOCAL-00002" summary="默认">
+      <created>1493709926029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493709926029</updated>
+    </task>
+    <task id="LOCAL-00003" summary="默认">
+      <created>1493727380028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493727380028</updated>
+    </task>
+    <task id="LOCAL-00004" summary="默认">
+      <created>1493780591030</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493780591030</updated>
+    </task>
+    <task id="LOCAL-00005" summary="默认">
+      <created>1493787669030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1493787669030</updated>
+    </task>
+    <task id="LOCAL-00006" summary="默认">
+      <created>1493788240032</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493788240032</updated>
+    </task>
+    <task id="LOCAL-00007" summary="默认">
+      <created>1493792961031</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1493792961031</updated>
+    </task>
+    <task id="LOCAL-00008" summary="默认">
+      <created>1493796812025</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1493796812025</updated>
+    </task>
+    <task id="LOCAL-00009" summary="默认">
+      <created>1493955944032</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1493955944032</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="740675000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="104" y="23" width="1453" height="953" extended-state="1" />
+    <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.300905" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23537509" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280543" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
+    <MESSAGE value="默认" />
+    <option name="LAST_COMMIT_MESSAGE" value="默认" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/pages/LoginInterface/LoginInterface.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/LoginInterface/forgetPassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/VIP/BuyingInformation/BuyingInformation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/VIP/HomeImprovement/HomeImprovement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/img/vip7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/img/vip8.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/img/vip6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/VIP/VIP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="54" lean-forward="false" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/LoginInterface/forgetPassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/userinfo/userinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/userinfo/userinfo.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="112" column="7" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/my/changePassword/changePassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/my/changePassword/changePassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/RegisterAccount/RegisterAccount.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/LoginInterface/LoginInterface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tabs/tabs.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tabs/tabs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="81" lean-forward="false" selection-start-line="4" selection-start-column="81" selection-end-line="4" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/my/my.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contact/image-param.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contact/common-release.scss" />
+    <entry file="file://$PROJECT_DIR$/src/pages/my/my.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/comment/comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/LoginInterface/LoginInterface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contact/common-release.ts" />
+    <entry file="file://$PROJECT_DIR$/src/pages/contact/common-release.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/home.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#54#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contact/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/upload.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/VIP/HomeImprovement/HomeImprovement.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="116" column="5" lean-forward="true" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/VIP/BuyingInformation/ResponseToPurchase/ResponseToPurchase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/VIP/BuyingInformation/ResponseToPurchase/ResponseToPurchase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanImg.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/quan.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanImg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/quan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="229" column="0" lean-forward="false" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/quan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/theme/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/jinri.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/jiaoliu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#521#567#0" expanded="true" />
+            <element signature="e#977#1020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/quan/QuanTabs/jiandin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contact/contact.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

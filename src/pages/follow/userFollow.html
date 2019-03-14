@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>关注</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-list-header>
+      全部关注
+    </ion-list-header>
+    <ion-item *ngFor="let i of data">
+      <ion-avatar item-left>
+        <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+i.avatar}}">
+      </ion-avatar>
+      <h2>{{i.name}}</h2>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

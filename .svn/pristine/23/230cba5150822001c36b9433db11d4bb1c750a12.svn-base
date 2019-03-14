@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+
+import { NavController } from 'ionic-angular';
+
+@Component({
+  selector: 'page-recharge',
+  templateUrl: 'Recharge.html'
+})
+export class RechargePage {
+
+  constructor(public navCtrl: NavController) {
+
+  }
+  goBack() {
+    this.navCtrl.pop();
+  }
+  recharge:number = null;
+}

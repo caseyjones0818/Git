@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>求购信息</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only [navPush]="NeedtobuyPage">
+        <p>我要求购</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-item>
+    <ion-label>全部类别</ion-label>
+     <ion-select [(ngModel)]="festId" (ionChange)="festSelected($event, festId)" cancelText="取消" okText="确定">
+        <ion-option *ngFor="let i of categoryList" value="{{i.id}}">{{i.categoryName}}</ion-option>
+      </ion-select>
+    <ion-label>时间排序</ion-label>
+    <ion-select [(ngModel)]="os" (ionChange)="osSelected($event, os)" cancelText="取消" okText="确定">
+      <ion-option value="desc">最新</ion-option>
+      <ion-option value="aesc">最旧</ion-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-card *ngFor="let i of data">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{i.avatar}}">
+      </ion-avatar>
+      <h2>{{i.userName}}</h2>
+      <p>{{i.title}} ,{{i.categoryName}}</p>
+    </ion-item>
+    <ion-card-content>
+      <p>{{i.introduction}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>{{i.responseCount}}条响应</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="push(i.requestId)">
+          <ion-icon name="text"></ion-icon>
+          <div>响应求购</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          {{i.createTime| date:"yyyy-MM-dd"}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

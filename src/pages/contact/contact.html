@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-buttons start>
+      <button ion-button icon-only color="royal" (click)="clean()">取消</button>
+    </ion-buttons>
+    <ion-title>
+      发布藏品
+    </ion-title>
+    <ion-buttons end *ngIf="pet == 'jiaoliu'">
+      <button ion-button icon-only (click)="jiaoliuupload()" [disabled]="disabled" [disabled]="imagePaths.length===0">
+      <p>发送</p>
+    </button>
+    </ion-buttons>
+    <ion-buttons end *ngIf="pet == 'jiandin'">
+      <button ion-button icon-only (click)="jiandinupload()" [disabled]="disabled" [disabled]="imagePaths.length===0">
+        <p>发送</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="jiandin">
+        藏品鉴定
+      </ion-segment-button>
+      <ion-segment-button value="jiaoliu">
+        藏品交流
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'jiaoliu'">
+      <ion-item>
+        <ion-label color="dark">藏品标题：</ion-label>
+        <ion-input placeholder="请输入藏品标题" [(ngModel)]="title" max="10" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>藏品类：</ion-label>
+        <ion-select [(ngModel)]="festId" (ionChange)="festSelected($event, festId)" cancelText="取消" okText="确定">
+          <ion-option *ngFor="let i of categoryList" value="{{i.id}}">{{i.categoryName}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label stacked>请输入藏品描述...</ion-label>
+        <ion-textarea rows="4" [(ngModel)]="content" type="text" placeholder="1、请描述您的藏品（重量尺寸规格）和鉴定要求，以便专家更好的为您鉴定；                                                                                                            2、上传图片尽量选用高像素数码相机自然光下多角度拍摄的图片；
+3、照片至少要有“正面全貌”、“局部”、“俯视”“底部”等图；
+4、请不要一次发布多个藏品的照片 ，专家老师不易筛选；
+5、点评内容包括真伪、年代、估价（考虑到古玩特殊性鉴定结果仅供参考）。" style="font-size:14px"></ion-textarea>
+      </ion-item>
+      <div class="imgContainer marginLeft10" *ngIf="imagePaths.length>0">
+        <div>
+          <img class="manyImg" *ngFor="let image of imagePaths" [src]=image>
+          <div class="clearFloat"></div>
+        </div>
+      </div>
+      <img src="assets/img/add.png" class="imgAdd" tappable (click)="addImg()" *ngIf="imagePaths.length<6">
+    </ion-list>
+    <ion-list *ngSwitchCase="'jiandin'">
+      <ion-item>
+        <ion-label color="dark">藏品标题：</ion-label>
+        <ion-input placeholder="请输入藏品标题" [(ngModel)]="title" max="10" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>藏品类别：</ion-label>
+        <ion-select [(ngModel)]="festId" (ionChange)="festSelected($event, festId)" cancelText="取消" okText="确定">
+          <ion-option *ngFor="let i of categoryList" value="{{i.id}}">{{i.categoryName}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label stacked>请输入藏品描述...</ion-label>
+        <ion-textarea rows="4" [(ngModel)]="content" type="text" placeholder="1、请描述您的藏品（重量尺寸规格）和鉴定要求，以便专家更好的为您鉴定；                                                                                                            2、上传图片尽量选用高像素数码相机自然光下多角度拍摄的图片；
+3、照片至少要有“正面全貌”、“局部”、“俯视”“底部”等图；
+4、请不要一次发布多个藏品的照片 ，专家老师不易筛选；
+5、点评内容包括真伪、年代、估价（考虑到古玩特殊性鉴定结果仅供参考）。" style="font-size:14px"></ion-textarea>
+      </ion-item>
+      <div class="imgContainer marginLeft10" *ngIf="imagePaths.length>0">
+        <div>
+          <img class="manyImg" *ngFor="let image of imagePaths" [src]=image>
+          <div class="clearFloat"></div>
+        </div>
+      </div>
+      <img src="assets/img/add.png" class="imgAdd" tappable (click)="addImg()" *ngIf="imagePaths.length<6">
+      <ion-item class="color1 font2">
+        支付方式
+      </ion-item>
+      <ion-item class="font1">
+        <div>99金币</div>
+        <div>(账户余额为{{gold}})</div>
+      </ion-item>
+      <div class="font1 tishi">
+        <div style="font-size:15px">温馨提示：</div><br>
+        <div>1.尽量将上传藏品各个角度的图片，以供鉴定师查看。</div>
+        <div>2.每单鉴定申请限提交一项藏品，如提交多项藏品，鉴定师可能只挑选其中一项进行鉴定。</div>
+        <div>3.鉴定结果仅供参考，不作为任何交易、拍卖、投资等活动的依据。</div>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

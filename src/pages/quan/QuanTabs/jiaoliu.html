@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>{{title}} ,{{categoryName}}</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-left (click)="pushUserinfoPage(userId)">
+        <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+avatar+'-thumbnail25'}}">
+      </ion-avatar>
+      <h2>{{userName}}</h2>
+      <p>{{title}} ,{{categoryName}}</p>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4  col-sm  *ngFor="let img of imgList,let i = index">
+          <div background-size class="half" [ngStyle]="{'background-image': 'url(' + img.url+'-thumbnail25' + ')'}" (click)="push(collectionDetailData, i)" ></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card-content>
+      <p>{{introduction}}</p>
+    </ion-card-content>
+    <ion-row>
+      <!--<ion-col>
+        <button ion-button icon-left clear small >
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>赞</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>{{commentCount}} 评论</div>
+        </button>
+      </ion-col>-->
+      <ion-col center text-right>
+        <ion-note>
+          {{insertDate | date:"yyyy-MM-dd"}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card *ngFor="let i of comments">
+    <ion-item >
+      <ion-avatar item-left>
+        <img src="{{'http://7xqlp0.com2.z0.glb.qiniucdn.com/'+i.avatar+'-thumbnail25'}}">
+      </ion-avatar>
+      <h2>{{i.userName}}</h2>
+      <!--<ion-icon  name="md-text" style="color: #8f9fad" item-right (click)="commentModal()"></ion-icon>-->
+    </ion-item>
+    <ion-card-content>
+      <p>{{i.commentContent}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small  *ngIf="i.like==false"  (click)="zan(i.id)">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>赞</div>
+        </button>
+        <button ion-button icon-left clear small *ngIf="i.like==true"   (click)="buzan(i.id)">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>已赞</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div> {{i.commentChildList.length}}评论</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          {{i.commentTime| date:"yyyy-MM-dd"}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" *ngIf="favorite===false"  icon-left (click)="shoucang()">
+          <ion-icon name='star'></ion-icon>
+          收藏
+        </button>
+        <button ion-button clear small color="danger" *ngIf="favorite===true" icon-left (click)="bushoucang()">
+          <ion-icon name='star'></ion-icon>
+          已收藏
+        </button>
+      </ion-col>
+      <ion-col text-center (click)="commentModal(collectionId)">
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='ios-create'></ion-icon>
+          评论
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="goShare()">
+          <ion-icon name='share-alt'></ion-icon>
+          分享
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>设置</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="huise">
+  <ion-list margin-top>
+    <button ion-item [navPush]="changePasswordPage">修改密码</button>
+  </ion-list>
+  <!--<ion-list>
+    <button ion-item [navPush]="MessageSettingsPage">消息设置</button>
+    <button ion-item [navPush]="blacklistPage">黑名单</button>
+  </ion-list>-->
+  <button ion-button full (click)="backLogin()">退出登入</button>
+
+</ion-content>

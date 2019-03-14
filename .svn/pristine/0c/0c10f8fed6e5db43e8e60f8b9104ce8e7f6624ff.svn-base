@@ -1,0 +1,191 @@
+import { Component } from '@angular/core';
+import { NavController,AlertController,NavParams} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http ,Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+import { RechargePage } from '../my/myTabs/Recharge';
+import { EarnGoldPage } from '../my/myTabs/EarnGold';
+import { MyNewsPage } from '../my/myTabs/MyNews';
+import { PublishingCollectionsPage } from '../my/myTabs/PublishingCollections';
+import { PostCommentPage } from '../my/myTabs/PostComment';
+import { FavoritePage } from '../my/myTabs/Favorite';
+import { GoldMallPage } from '../my/myTabs/GoldMall';
+import { InviteFriendsPage } from '../my/myTabs/InviteFriends';
+import { followerPage } from '../follower/follower';
+import { followPage } from '../follow/follow';
+import { sitePage } from '../my/site/site';
+import {LoginInterfacePage} from '../LoginInterface/LoginInterface';
+
+
+
+@Component({
+  selector: 'page-my',
+  templateUrl: 'my.html'
+})
+export class MyPage {
+  push1Page :any = EarnGoldPage;
+  push2Page :any = MyNewsPage;
+  push3Page :any = PublishingCollectionsPage;
+  push4Page :any = PostCommentPage;
+  push5Page :any = FavoritePage;
+  push8Page :any = GoldMallPage;
+  push9Page :any = InviteFriendsPage;
+  push10Page :any = RechargePage;
+  followerPage :any = followerPage;
+  sitePage:any = sitePage;
+  id:any;
+  token:any;
+  avatar:any;
+  userName:any;
+  signature:any;
+  fansCount:any;
+  followCount:any;
+  gold:any;
+  vipLevel:any;
+  UpdatedName:string;
+  UpdatedSignature:string;
+
+  constructor(public navCtrl: NavController,
+              public alertCtrl: AlertController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,) {
+    storage.ready().then(() => {
+      // set a key/value
+      storage.get('token').then((val) => {
+        console.log('token', val);
+        var token='token='+val;
+        // if(val==null){
+        //   //     //token为null时跳转登入页
+        //       this.navCtrl.push(LoginInterfacePage, {});
+        // }
+        this.token ='token='+val
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let data = {};
+        var url = 'http://120.132.92.55/sc_api/sc/api/my/meIndex?';
+        this.http.post(url+token, JSON.stringify(data))
+          .map(res => res.json())
+          .subscribe(data => {
+            console.log(data)
+            this.avatar = data.data.avatar;
+            this.userName = data.data.userName;
+            this.signature = data.data.signature;
+            this.fansCount = data.data.fansCount;
+            this.followCount = data.data.followCount;
+            this.gold = data.data.gold;
+            this.vipLevel = data.data.vipLevel;
+            this.token = data.data.token;
+            console.log('hhh',this.avatar)
+          }, (err) => {
+            console.log(err);
+          });
+      })
+    });
+
+  }
+
+
+  //跳转粉丝页
+  push= (token:any): any =>{
+    this.navCtrl.push(followPage, {
+      'token':token,
+    });
+    console.log('push',token )
+  }
+
+  editNickname() {
+    let prompt = this.alertCtrl.create({
+      title: '编辑昵称',
+      inputs: [
+        {
+          name: 'title',
+          value: this.UpdatedName,
+
+        },
+      ],
+      buttons: [
+        {
+          text: '取消',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: res => {
+            console.log('editNickname',res);
+            this.UpdatedName = res.title;
+
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            let data = {};
+            var url = 'http://120.132.92.55/sc_api/sc/api/user/updateUserInfo?';
+            let token = 'token=' +this.token
+            let user_name = '&user_name='+this.UpdatedName;
+            var URL =url+token+user_name
+            console.log('url',URL)
+            this.http.post(URL, JSON.stringify(data))
+              .map(res => res.json())
+              .subscribe(data => {
+                console.log(data)
+                this.userName = this.UpdatedName;
+
+              }, (err) => {
+                console.log(err);
+              });
+          }
+        }
+      ]
+    });
+    prompt.present();
+
+  }
+  introductionToEditing() {
+    let prompt = this.alertCtrl.create({
+      title: '编辑简介',
+      inputs: [
+        {
+          name: 'title',
+          value: this.UpdatedSignature
+        },
+      ],
+      buttons: [
+        {
+          text: '取消',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: res => {
+            console.log('introductionToEditing',res);
+            this.UpdatedSignature = res.title;
+
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            let data = {};
+            var url = 'http://120.132.92.55/sc_api/sc/api/user/updateUserInfo?';
+            let token = 'token=' +this.token
+            let signature = '&signature='+this.UpdatedSignature;
+            var URL =url+token+signature
+            console.log('url',URL)
+            this.http.post(URL, JSON.stringify(data))
+              .map(res => res.json())
+              .subscribe(data => {
+                console.log(data)
+                this.signature = this.UpdatedSignature;
+
+              }, (err) => {
+                console.log(err);
+              });
+          }
+        }
+      ]
+
+    });
+    prompt.present();
+  }
+}

@@ -1,0 +1,34 @@
+page-contact {
+  .imgContainer {
+    .oneImgContainer {
+      margin-top: 10px;
+    }
+
+    .fourImgContainer {
+      width: 150px;
+      margin-top: 5px;
+    }
+
+    .manyImgContainer {
+      width: 225px;
+      margin-top: 5px;
+    }
+
+    .manyImg {
+      width: 69px;
+      height: 69px;
+      float: left;
+      margin-left: 6px;
+      margin-top: 8px;
+      margin-right: 5px;
+    }
+  }
+
+  .imgAdd {
+    width: 70px;
+    height: 70px;
+    margin-left: 6px;
+    margin-top: 8px;
+    background-color: white;
+  }
+}

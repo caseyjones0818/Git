@@ -1,0 +1,187 @@
+import {Component} from '@angular/core';
+
+import {UploadService} from "../../service/upload.service";
+import {ImageParam} from "./image-param";
+import {Http, Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+import {Storage} from '@ionic/storage';
+
+
+import {ActionSheetController} from 'ionic-angular';
+import {CameraOptions, Camera, ImagePickerOptions, ImagePicker} from "ionic-native/dist/es5/index";
+import {Constant} from '../../service/Constant'
+
+@Component({
+  selector: 'page-contact',
+  templateUrl: 'contact.html'
+})
+export class ContactPage {
+  imagePaths: Array<string> = [];
+  content: string = '';
+  pet: string = "jiaoliu";
+  token;
+  storage;
+  category_id;
+  categoryList;
+  title;
+  id
+  imageUrls
+  constructor(private uploadService: UploadService,
+              private actionsheetCtrl: ActionSheetController,
+              private http: Http,
+              storage: Storage,
+  ) {
+    this.storage = storage;
+    storage.get('token').then((val) => {
+      console.log('222222token', val);
+      this.token = val;
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      // headers.append('Access-Control-Allow-Origin','http://localhost');
+      let data = {};
+      let url = Constant.APP_URL + 'sc/api/cang/releaseAppraisal?';
+      let token = 'token=' + this.token;
+      let URL = url + token;
+      console.log('333token', this.token);
+      this.http.post(URL, JSON.stringify(data))
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log('releaseAppraisal',data);
+          this.categoryList = data.data.categoryList;
+          this.id = this.categoryList.id;
+        }, (err) => {
+          console.log(err);
+        });
+
+    })
+
+
+  }
+//change监控藏品类别的id变化
+  festSelected(e,i) {
+    console.log('id',i)
+    this.category_id = i
+  }
+  // imagesSelected(event) {
+  //   this.imagePaths = event.value;
+  //
+  // }
+  //清除照片
+  clean(){
+    this.imagePaths.splice(0,this.imagePaths.length);
+  }
+
+  upload() {
+    // this.statusContent = '';
+    // this.imagePaths.splice(0,this.imagePaths.length);
+
+    // 这里设置为你的后台上传图片所需的参数
+    var uploadParams = new ImageParam();
+    uploadParams.ftype = 'image';
+    uploadParams.utype = 'goods';
+    // 注入UploadService
+    this.uploadService.uploadImages(uploadParams, this.imagePaths).subscribe((imgsdata) => {
+      this.imageUrls = imgsdata;
+      // 获得所有上传图片返回的uri之后，再做你想做的事情
+      // 这里拿到的后台返回的imageUrls数组与之前图片的本地url的filePaths数组的顺序是一致的
+      // 也就是说不管上传图片谁先请求成功，ForkJoinObservable内部会按照之前信号数组添加的顺序将后台返回的数据排好序放在imageUrls数组中,
+      // 这点还是不错的
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      let data = {};
+      let url = Constant.APP_URL + 'sc/api/cang/addCollection?';
+      let token = 'token=' + this.token;
+      let category_id = '&category_id=' + this.category_id;
+      let title = '&title=' + this.title;
+      let content = '&content=' + this.content;
+      let imgs = '&imgs=' + this.imageUrls;
+      let URL = url + token+category_id+title+content+imgs;
+      alert(URL)
+      this.http.post(URL, JSON.stringify(data))
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log('releaseAppraisal',data)
+          alert('发送成功！')
+        }, (err) => {
+          console.log(err);
+        });
+
+    }, error => {
+      console.log('上传失败');
+    });
+
+
+    }
+
+
+
+
+
+
+  addImg() {
+    let actionSheet = this.actionsheetCtrl.create({
+      cssClass: 'action-sheets-basic-page',
+      buttons: [
+        {
+          text: '拍照',
+          handler: () => {
+            this.takePhoto();
+          }
+        },
+        {
+          text: '从手机相册选择',
+          handler: () => {
+            this.pickImage();
+          }
+        },
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
+
+  takePhoto(): void {
+    let options: CameraOptions = {
+      sourceType: Camera.PictureSourceType.CAMERA,
+      destinationType: Camera.DestinationType.FILE_URI,
+      correctOrientation: true,
+      quality: 50,
+      targetWidth: 720,
+      encodingType: Camera.EncodingType.JPEG
+    };
+    Camera.getPicture(options).then((imageURI) => {
+      this.imagePaths.push(imageURI);
+    }, (error) => {
+      console.log(error);
+    });
+  }
+
+  pickImage(): void {
+    let options: ImagePickerOptions = {
+      maximumImagesCount: 1,
+      quality: 3
+    };
+    ImagePicker.getPictures(options).then((results) => {
+      this.imagePaths = this.imagePaths.concat(results);
+
+    }, (error) => {
+      console.log(error);
+    });
+  }
+
+  // // 发送更新图片数组
+  // emitImagesData() {
+  //   this.imagesSelected.emit({
+  //     value: this.imagePaths
+  //   });
+  //
+  // }
+
+
+}

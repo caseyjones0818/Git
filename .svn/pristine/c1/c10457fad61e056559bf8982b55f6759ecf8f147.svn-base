@@ -1,0 +1,47 @@
+import { Component } from '@angular/core';
+import { NavController,NavParams} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http ,Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Component({
+  selector: 'page-ConsignmentHosting',
+  templateUrl: 'RepairConsultation.html'
+})
+export class RepairConsultationPage{
+  data
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,) {
+    storage.ready().then(() => {
+      storage.get('token').then((val) => {
+        console.log('token', val);
+        var token='token='+val;
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let data = {};
+        var url = 'http://120.132.92.55/sc_api/sc/api/vip/getRepairList?';
+        var URL =url+token;
+        console.log('url',URL)
+        this.http.post(URL, JSON.stringify(data))
+          .map(res => res.json())
+          .subscribe(data => {
+            console.log('修复',data);
+            this.data = data.data
+
+          }, (err) => {
+            console.log(err);
+          });
+      })
+    });
+  }
+  logEvent(e,i) {
+    let condition = e.checked!=false;
+    if(condition){
+      console.log('id',i)
+    }
+
+  }
+}
+

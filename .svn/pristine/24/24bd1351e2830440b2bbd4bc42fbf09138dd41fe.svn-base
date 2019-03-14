@@ -1,0 +1,75 @@
+import { Component } from '@angular/core';
+import { NavController,NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { Http ,Headers} from '@angular/http';
+import 'rxjs/add/operator/map';
+import { userinfoPage } from  '../userinfo/userinfo';
+
+
+@Component({
+  selector: 'page-follower',
+  templateUrl: 'follower.html'
+})
+export class followerPage {
+  data:any;
+  URL
+  followId
+  userId
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private http: Http,
+              storage: Storage,) {
+    storage.ready().then(() => {
+      // set a key/value
+      storage.get('token').then((val) => {
+        console.log('token', val);
+        var token='token='+val;
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let data = {};
+        var url = 'http://120.132.92.55/sc_api/sc/api/user/getFansList?';
+        this.URL =url+token
+        this.http.post(url+token, JSON.stringify(data))
+          .map(res => res.json())
+          .subscribe(data => {
+            console.log(data)
+            this.data = data.data;
+            this.userId = data.data.userId;
+            console.log(this.data)
+          }, (err) => {
+            console.log(err);
+          });
+      })
+    });
+  }
+  goBack() {
+    this.navCtrl.pop();
+  }
+  //跳转用户信息页
+  pushUserinfoPage=(userId:any):any =>{
+    this.navCtrl.push(userinfoPage, {
+      'userId':userId
+    });
+  }
+
+  doRefresh(refresher) {
+    console.log('222',this.URL)
+    setTimeout(() => {
+      let data = {};
+      this.http.post(this.URL, JSON.stringify(data))
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log(data)
+          this.data = data.data;
+          let e =   this.data;
+          for(let i = 0; i < e.length; i++){
+            this.followId = e[i].userId
+            // console.log('userId',this.followId)
+          }
+        }, (err) => {
+          console.log(err);
+        });   refresher.complete();
+    }, 2000);
+  }
+
+}

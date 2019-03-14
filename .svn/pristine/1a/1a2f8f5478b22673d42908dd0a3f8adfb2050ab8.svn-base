@@ -1,0 +1,229 @@
+import { Component } from '@angular/core';
+import { NavController,ModalController,NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+import { jiandinPage } from '../quan/QuanTabs/jiandin';
+import { jinriPage } from '../quan/QuanTabs/jinri';
+import { jiaoliuPage } from '../quan/QuanTabs/jiaoliu';
+import { QuanImgPage } from  '../quan/QuanImg';
+
+@Component({
+  selector: 'page-quan',
+  templateUrl: 'quan.html'
+})
+export class QuanPage {
+  shouCangQuan: string = "jiandin";
+  jiandinInterface:any;
+  jinriInterface:any;
+  jiaoliuInterface:any;
+  pageInde:any = 0;
+  params:any;
+  //页面跳转类型
+
+
+  constructor( public navCtrl: NavController,public modalCtrl: ModalController,private http: Http,public navParams: NavParams ) {
+
+    var jiandinUrl = 'http://120.132.92.55/sc_api/sc/api/shou/appraisalList';
+    var jinriUrl = 'http://120.132.92.55/sc_api/sc/api/shou/collectionCircle';
+    var jiaoliuUrl = 'http://120.132.92.55/sc_api/sc/api/shou/allCollection';
+    this.http.get(jiandinUrl+'?pageIndex=0&pageSize=20').map(res => res.json()).subscribe(data => {
+        if(data.success == true){
+          this.jiandinInterface = data.data;
+          console.log(data);
+        }
+        else {
+          console.log('接口访问出错')
+        }
+      },
+      err => {
+        console.log('报错');
+      });
+
+    this.http.get(jinriUrl).map(res => res.json()).subscribe(data => {
+        if(data.success == true){
+          this.jinriInterface = data.data;
+          console.log(data);
+        }
+        else {
+          console.log('接口访问出错')
+        }
+      },
+      err => {
+        console.log('报错');
+      });
+
+    this.http.get(jiaoliuUrl+'?pageIndex=0&pageSize=20').map(res => res.json()).subscribe(data => {
+        if(data.success == true){
+          this.jiaoliuInterface = data.data;
+          console.log(data);
+        }
+        else {
+          console.log('接口访问出错')
+        }
+      },
+      err => {
+        console.log('报错');
+      });
+
+
+  }
+
+//图片查看器
+//   push= (img:any, index:number): any =>{
+//     this.navCtrl.push(QuanImgPage, {
+//       'img':img,
+//       'index': index,
+//     });
+//     console.log('点击图片数据',img)
+//   }
+
+  pushJiandinDetailed= (id:any): any =>{
+    this.navCtrl.push(jiandinPage, {
+      'id': id,
+    });
+  }
+
+  pushJiaoliuDetailed= (id:any): any =>{
+    this.navCtrl.push(jiaoliuPage, {
+      'id': id,
+    });
+  }
+
+  pushJinriDetailed= (id:any): any =>{
+    this.navCtrl.push(jinriPage, {
+      'id': id,
+    });
+  }
+
+//鉴定上下拉刷新
+  doRefreshJiandin(refresher) {
+    var jiandinUrl = 'http://120.132.92.55/sc_api/sc/api/shou/appraisalList';
+
+    console.log('Begin async operation', refresher);
+    setTimeout(() => {
+      this.http.get(jiandinUrl+'?pageIndex=0&pageSize=20').map(res => res.json()).subscribe(data => {
+          if(data.success == true){
+            this.jiandinInterface = data.data;
+            console.log(data);
+          }
+          else {
+            console.log('接口访问出错')
+          }
+        },
+        err => {
+          console.log('报错');
+        });      refresher.complete();
+    }, 2000);
+  }
+
+
+  doInfiniteJiandin(infiniteScroll) {
+    console.log('Begin async operation');
+    setTimeout(() => {
+      var pageinde=this.pageInde++;
+      this.httpDataJiandin(pageinde);
+
+      console.log('Async operation has ended');
+
+      infiniteScroll.complete();
+    }, 500);
+  }
+
+  httpDataJiandin(pageInde) {
+    var url='http://120.132.92.55/sc_api/sc/api/shou/appraisalList?pageIndex='+pageInde+'&pageSize=20';
+
+    this.http.get(url).map(res => res.json()).subscribe(data => {
+        if (data.success == true) {
+
+          for(let i=0;i<data.data.length;i++){
+            this.jiandinInterface.push(data.data[i]);
+          }
+
+          console.log(data);
+          console.log(this.jiandinInterface);
+        }
+        else {
+          console.log('接口访问出错')
+        }
+      },
+      err => {
+        console.log('报错');
+      });
+  }
+
+
+  //今日下拉刷新
+  doRefreshJinri(refresher) {
+    console.log('Begin async operation', refresher);
+    var jinriUrl = 'http://120.132.92.55/sc_api/sc/api/shou/collectionCircle';
+
+    setTimeout(() => {
+      this.http.get(jinriUrl).map(res => res.json()).subscribe(data => {
+          if(data.success == true){
+            this.jinriInterface = data.data;
+            console.log(data);
+          }
+          else {
+            console.log('接口访问出错')
+          }
+        },
+        err => {
+          console.log('报错');
+        });      refresher.complete();
+    }, 2000);
+  }
+
+  //藏品交流上下拉刷新
+
+  doRefreshJiaoliu(refresher) {
+    console.log('Begin async operation', refresher);
+    var jiaoliuUrl = 'http://120.132.92.55/sc_api/sc/api/shou/allCollection';
+    setTimeout(() => {
+      this.http.get(jiaoliuUrl+'?pageIndex=0&pageSize=20').map(res => res.json()).subscribe(data => {
+          if(data.success == true){
+            this.jiaoliuInterface = data.data;
+            console.log(data);
+          }
+          else {
+            console.log('接口访问出错')
+          }
+        },
+        err => {
+          console.log('报错');
+        });      refresher.complete();
+    }, 2000);
+  }
+
+
+  doInfiniteJiaoliu(infiniteScroll) {
+    setTimeout(() => {
+      var pageinde=this.pageInde++;
+      this.httpDataJiaoliu(pageinde);
+      infiniteScroll.complete();
+    }, 500);
+  }
+
+  httpDataJiaoliu(pageInde) {
+    var url='http://120.132.92.55/sc_api/sc/api/shou/allCollection?pageIndex='+pageInde+'&pageSize=20';
+    this.http.get(url).map(res => res.json()).subscribe(data => {
+        if (data.success == true) {
+          for(let i=0;i<data.data.length;i++){
+            this.jiaoliuInterface.push(data.data[i]);
+          }
+          console.log(data);
+          console.log(this.jiaoliuInterface);
+        }
+        else {
+          console.log('接口访问出错')
+        }
+      },
+      err => {
+        console.log('报错');
+      });
+  }
+
+}
+
+
+

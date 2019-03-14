@@ -1,0 +1,39 @@
+import { Component,Injectable } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+import {Storage} from '@ionic/storage';
+
+import { changePasswordPage } from '../changePassword/changePassword';
+import { MessageSettingsPage } from '../MessageSettings/MessageSettings';
+import { blacklistPage } from '../blacklist/blacklist';
+import { LoginInterfacePage } from '../../LoginInterface/LoginInterface';
+
+@Component({
+  selector: 'page-site',
+  templateUrl: 'site.html'
+})
+@Injectable()
+export class sitePage {
+  changePasswordPage :any = changePasswordPage;
+  MessageSettingsPage :any = MessageSettingsPage;
+  blacklistPage :any = blacklistPage;
+  storage
+
+  constructor(public navCtrl: NavController,private http: Http,storage: Storage,
+  ) {
+    this.storage =storage;
+  }
+  goBack() {
+    this.navCtrl.pop();
+  }
+  backLogin(){
+    //跳转登入
+    this.navCtrl.push(LoginInterfacePage, {});
+    this.storage.remove('account')
+    this.storage.remove('password')
+    this.storage.remove('token')
+
+  }
+
+}

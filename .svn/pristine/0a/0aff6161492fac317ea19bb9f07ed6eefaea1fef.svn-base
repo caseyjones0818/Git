@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentActionSheet()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="color1">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="{{avatar}}" style="width: 80px;height: 80px">
+    </ion-avatar>
+    <h2>{{userName}}</h2>
+    <p>简介：November 5, 1955</p>
+  </ion-item>
+  <ion-grid text-center padding margin-bottom class="color2">
+    <ion-row >
+      <ion-col width-33>0<br><span>热度</span></ion-col>
+      <ion-col width-33 (click)="pushFans(userId)">{{fansCount}}<br><span>粉丝</span></ion-col>
+      <ion-col width-33 (click)="push(userId)">{{followCount}}<br><span>关注</span></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <button ion-item (click)="pushHisRelease(userId)">他的发布</button>
+    <button ion-item (click)="pushHisCommments(userId)">他的评论</button>
+  </ion-list>
+</ion-content>

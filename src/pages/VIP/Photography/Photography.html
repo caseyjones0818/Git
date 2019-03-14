@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>摄影装裱</ion-title>
+    <ion-buttons end (click)="fa()">
+      <button ion-button icon-only>
+        <p>提交</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label color="primary">标题：</ion-label>
+    <ion-input placeholder="不要超过15字" maxlength="15" [(ngModel)]="title"></ion-input>
+  </ion-item>
+  <p margin>提供各地专业摄影修图团队服务信息，并提供相应保障</p>
+  <ion-item>
+    <ion-label color="primary">服务说明：</ion-label>
+    <ion-textarea placeholder="备注信息：预算，对摄影的要求，不少于10字，不超过300字" [(ngModel)]="comment"></ion-textarea>
+  </ion-item>
+</ion-content>

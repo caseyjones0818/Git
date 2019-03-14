@@ -1,0 +1,6 @@
+page-VIP{
+  $banner-height:22vh;
+  .banner{
+    height:$banner-height;
+  }
+}

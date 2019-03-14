@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="cangzhen">
+    <ion-title>充值金币</ion-title>
+    <div (click)="goBack()"></div>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label color="dark">充值金币数量：</ion-label>
+    <ion-input type="number" placeholder="0" minlength="3" value="100" [(ngModel)]="recharge"></ion-input>
+  </ion-item>
+  <span padding style="color: #8e9093">(1元=100金币)</span>
+  <ion-item padding-top>
+    <ion-label color="dark" value="0">应付金额：{{ recharge / 100 }} 元</ion-label>
+  </ion-item>
+
+
+  <ion-list radio-group (ionChange)="zhifuRadio($event)" color="cangzhen">
+    <ion-item class="color1 font2">
+      支付方式
+    </ion-item>
+    <ion-item class="font1">
+      <ion-label>微信支付</ion-label>
+      <ion-radio value="wx" checked="true"></ion-radio>
+    </ion-item>
+    <ion-item class="font1">
+      <ion-label>支付宝支付</ion-label>
+      <ion-radio value="alipay"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button full color="secondary" (click)="chongzhi()">充值</button>
+</ion-content>

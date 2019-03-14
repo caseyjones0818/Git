@@ -1,0 +1,7 @@
+page-follow{
+  $follow-font:relative;
+  .follow-font{
+    position: $follow-font;
+    right: 5px;
+  }
+}
